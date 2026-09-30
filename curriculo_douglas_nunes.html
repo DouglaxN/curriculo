@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Douglas Nunes da Silva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-soft: #eff6ff;
+            --text-main: #334155;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @page {
+            size: A4;
+            margin: 10mm 13mm;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-main);
+            background-color: #f1f5f9;
+            line-height: 1.4;
+            font-size: 9.3pt;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .resume-page {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px 26px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+
+        /* HEADER */
+        .header {
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 11px;
+        }
+
+        .name {
+            font-size: 21pt;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .role-tagline {
+            font-size: 10.2pt;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge {
+            background-color: var(--accent-soft);
+            color: var(--accent);
+            padding: 1px 7px;
+            border-radius: 4px;
+            font-size: 8.5pt;
+            font-weight: 600;
+            border: 1px solid #bfdbfe;
+        }
+
+        .contacts-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px 14px;
+            margin-top: 8px;
+            font-size: 8.8pt;
+            color: var(--text-muted);
+        }
+
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-item a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .icon-svg {
+            width: 13px;
+            height: 13px;
+            stroke: var(--accent);
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        /* SECTION */
+        .section {
+            margin-bottom: 11px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-bottom: 6px;
+            padding-bottom: 2px;
+            border-bottom: 1.5px solid var(--border);
+        }
+
+        .section-icon {
+            width: 14px;
+            height: 14px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2.2;
+        }
+
+        .summary-text {
+            color: var(--text-main);
+            text-align: justify;
+            line-height: 1.45;
+            background: var(--card-bg);
+            border-left: 3px solid var(--accent);
+            padding: 7px 11px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        /* EXPERIENCE */
+        .exp-item {
+            margin-bottom: 8px;
+            padding-left: 11px;
+            border-left: 2px solid var(--border);
+            position: relative;
+        }
+
+        .exp-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            box-shadow: 0 0 0 2px #fff;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .exp-org {
+            font-size: 9.8pt;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .exp-date {
+            font-size: 8.4pt;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .exp-role {
+            font-size: 9.1pt;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 3px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-top: 2px;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 13px;
+            margin-bottom: 2.5px;
+            color: var(--text-main);
+            text-align: justify;
+            font-size: 9pt;
+            line-height: 1.38;
+        }
+
+        .bullet-list li::before {
+            content: '•';
+            position: absolute;
+            left: 2px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .bullet-list strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            margin-top: 2px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-top: 2.2px solid var(--accent);
+            border-radius: 5px;
+            padding: 5px 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-title {
+            font-size: 8.8pt;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5px;
+        }
+
+        .project-desc {
+            font-size: 8pt;
+            color: var(--text-main);
+            margin-bottom: 3.5px;
+            line-height: 1.3;
+        }
+
+        .tech-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+            margin-top: auto;
+        }
+
+        .pill {
+            background-color: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #1e293b;
+            font-size: 7pt;
+            font-weight: 600;
+            padding: 0 4px;
+            border-radius: 3px;
+        }
+
+        /* SKILLS */
+        .skills-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 7px 11px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .skill-line {
+            display: flex;
+            font-size: 8.9pt;
+            line-height: 1.38;
+        }
+
+        .skill-cat {
+            width: 155px;
+            font-weight: 700;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .skill-cat::after {
+            content: ':';
+        }
+
+        .skill-items {
+            color: var(--text-main);
+            flex: 1;
+        }
+
+        /* EDUCATION */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 7px;
+        }
+
+        .edu-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            padding: 6px 10px;
+        }
+
+        .edu-title {
+            font-size: 9.2pt;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .edu-inst {
+            font-size: 8.6pt;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .edu-date {
+            font-size: 8.1pt;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                font-size: 9.1pt;
+            }
+            .resume-page {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            .exp-item {
+                page-break-inside: avoid;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-page">
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <h1 class="name">Douglas Nunes da Silva</h1>
+        <div class="role-tagline">
+            Discente de Tecnologia da Informação
+            <span class="badge">IMD / UFRN</span>
+        </div>
+
+        <div class="contacts-grid">
+            <div class="contact-item">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Natal/RN</span>
+            </div>
+            <div class="contact-item">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:douglas.nunes.132@ufrn.edu.br">douglas.nunes.132@ufrn.edu.br</a>
+            </div>
+            <div class="contact-item">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <a href="https://github.com/DouglaxN" target="_blank">github.com/DouglaxN</a>
+            </div>
+            <div class="contact-item">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <a href="https://linkedin.com/in/douglas-nunes-da-silva" target="_blank">in/douglas-nunes-da-silva</a>
+            </div>
+            <div class="contact-item">
+                <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <a href="http://lattes.cnpq.br/8276138975780850" target="_blank">Lattes: 8276138975780850</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SOBRE MIM -->
+    <section class="section">
+        <h2 class="section-title">
+            <svg class="section-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg>
+            Sobre Mim
+        </h2>
+        <div class="summary-text">
+            Estudante de graduação em Tecnologia da Informação (IMD/UFRN) e Técnico em TI pelo IFRN. Realizo pesquisa em Bioinformática voltada para ciência de dados biológicos e análise de dados transcriptômicos. Tenho experiência em análise de dados com R e Python. Atualmente, atuo como estagiário em Ciência de Dados e IA na Secretaria de Estado da Tributação (SEFAZ-RN), desenvolvendo arquiteturas multiagentes (LangGraph, LangChain), sistemas de busca semântica RAG e microsserviços REST em Python com Docker.
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section class="section">
+        <h2 class="section-title">
+            <svg class="section-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            Experiência Profissional e de Pesquisa
+        </h2>
+
+        <!-- SEFAZ -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-org">SEFAZ | RN — Secretaria de Estado da Tributação</span>
+                <span class="exp-date">Fev/2026 – Presente</span>
+            </div>
+            <div class="exp-role">Estagiário em Ciência de Dados e Inteligência Artificial — Natal/RN</div>
+            <ul class="bullet-list">
+                <li>Atuação no desenvolvimento de soluções de Inteligência Artificial, automação de processos e análise de dados.</li>
+                <li>Construção de arquiteturas multiagentes e sistemas RAG (Retrieval-Augmented Generation) para consulta e gestão da informação utilizando <strong>Python, LangGraph, LangChain</strong> e banco vetorial <strong>ChromaDB</strong>.</li>
+                <li>Desenvolvimento de microsserviços e APIs RESTful com <strong>Flask-RESTX e FastAPI</strong>, documentação OpenAPI/Swagger e controle de sessão distribuída em <strong>Redis</strong>.</li>
+                <li>Containerização e padronização de ambientes com <strong>Docker e Docker Compose</strong>, controle de versão via <strong>Git/GitHub</strong> e práticas de testes de software.</li>
+            </ul>
+        </div>
+
+        <!-- UFRN / BioME - Dalmolin -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-org">BioME | UFRN — Laboratório de Bioinformática</span>
+                <span class="exp-date">Set/2025 – Ago/2026</span>
+            </div>
+            <div class="exp-role">Bolsista de Iniciação Científica (PIBIC / PROPESQ) — Natal/RN</div>
+            <ul class="bullet-list">
+                <li><strong>Projeto PIA21320-2023:</strong> Análise de transcriptômica (RNA-seq) e análise de redes, desenvolvendo pipelines em Nextflow, scripts em R e Shell para automação (Orientador: Prof. Rodrigo Dalmolin).</li>
+            </ul>
+        </div>
+
+        <!-- UFRN / BioME - Jorge Estefano -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-org">BioME | UFRN — Laboratório de Bioinformática</span>
+                <span class="exp-date">Jun/2024 – Jan/2025</span>
+            </div>
+            <div class="exp-role">Bolsista de Iniciação Científica (PIBIC / PROPESQ) — Natal/RN</div>
+            <ul class="bullet-list">
+                <li><strong>Projeto PIT20207-2022:</strong> Apoio no estabelecimento e manutenção de ambientes computacionais e ferramentas para pesquisa em bioinformática (Orientador: Prof. Jorge Estefano).</li>
+            </ul>
+        </div>
+
+        <!-- LBMG -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-org">LBMG | UFRN — Laboratório de Biologia Molecular e Genômica</span>
+                <span class="exp-date">Fev/2024 – Dez/2024</span>
+            </div>
+            <div class="exp-role">Suporte Técnico e Desenvolvimento Web — Natal/RN</div>
+            <ul class="bullet-list">
+                <li>Desenvolvimento e manutenção do site e aplicações do laboratório utilizando PHP, Laravel e JavaScript.</li>
+                <li>Montagem, instalação e manutenção preventiva e corretiva de computadores, além de suporte básico a usuários.</li>
+            </ul>
+        </div>
+
+        <!-- AQUATEC & TP -->
+        <div class="exp-item" style="margin-bottom: 2px;">
+            <div class="exp-header">
+                <span class="exp-org">AQUATEC Ltda. & Teleperformance</span>
+                <span class="exp-date">2020 – 2022</span>
+            </div>
+            <div class="exp-role">Estágio Técnico de TI (IFRN) & Atendimento Técnico — RN</div>
+            <ul class="bullet-list">
+                <li>Suporte a computadores e redes, acompanhamento de rotinas em banco de dados e atendimento técnico com foco em resolução de chamados.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section">
+        <h2 class="section-title">
+            <svg class="section-icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Projetos Desenvolvidos
+        </h2>
+        <div class="projects-grid">
+            <!-- AGENTES -->
+            <div class="project-card">
+                <div class="project-title">Agente Sofia</div>
+                <div class="project-desc">
+                    Atendimento a motoristas em postos fiscais via Telegram (texto, leitura de QR Code em notas e áudio).
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Telegram</span>
+                    <span class="pill">QR Code</span>
+                    <span class="pill">LangGraph</span>
+                    <span class="pill">Docker</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Agente Odin</div>
+                <div class="project-desc">
+                    Suporte a servidores via Mattermost com buscas automáticas de chamados e processos via <em>tool-calling</em>.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Mattermost</span>
+                    <span class="pill">Tool-Calling</span>
+                    <span class="pill">Citsmart</span>
+                    <span class="pill">Docker</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Agente Talita</div>
+                <div class="project-desc">
+                    Assistente do Portal UVT para dúvidas sobre notas e ICMS com RAG e direcionamento ao Fale Conosco.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Portal UVT</span>
+                    <span class="pill">RAG</span>
+                    <span class="pill">ChromaDB</span>
+                    <span class="pill">LangGraph</span>
+                </div>
+            </div>
+
+            <!-- SISTEMAS & APIS -->
+            <div class="project-card">
+                <div class="project-title">Sistema Agentes IA (Arquitetura)</div>
+                <div class="project-desc">
+                    Arquitetura em microsserviços usando padrões <strong>Facade</strong> e <strong>Factory</strong>, grafos LangGraph com fallback resiliente, memória Redis e observabilidade MLflow.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Microsserviços</span>
+                    <span class="pill">Facade / Factory</span>
+                    <span class="pill">LangGraph</span>
+                    <span class="pill">Redis</span>
+                    <span class="pill">MLflow</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">API Talita (Motor NLP)</div>
+                <div class="project-desc">
+                    Microsserviço com rede neural (Keras/TensorFlow) e normalização de texto para classificar intenções.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">TensorFlow</span>
+                    <span class="pill">Keras</span>
+                    <span class="pill">NLTK</span>
+                    <span class="pill">Flask</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">API Caixa de Entrada</div>
+                <div class="project-desc">
+                    Pipeline para limpeza de dados e classificação automática de mensagens do canal Fale Conosco com FastText.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">FastText</span>
+                    <span class="pill">Pandas</span>
+                    <span class="pill">Pipeline</span>
+                    <span class="pill">Flask</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="section">
+        <h2 class="section-title">
+            <svg class="section-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            Habilidades Técnicas
+        </h2>
+        <div class="skills-box">
+            <div class="skill-line">
+                <span class="skill-cat">Programação</span>
+                <span class="skill-items">Python (FastAPI, Flask), R, PHP (Laravel), SQL, Java (básico)</span>
+            </div>
+            <div class="skill-line">
+                <span class="skill-cat">Inteligência Artificial</span>
+                <span class="skill-items">LangChain, LangGraph, RAG, ChromaDB, Keras/TensorFlow, FastText, NLTK, APIs de LLMs</span>
+            </div>
+            <div class="skill-line">
+                <span class="skill-cat">Web & Front-end</span>
+                <span class="skill-items">HTML, CSS, Bootstrap, JavaScript, noções de React</span>
+            </div>
+            <div class="skill-line">
+                <span class="skill-cat">Ferramentas & DevOps</span>
+                <span class="skill-items">Git/GitHub, Docker, Docker Compose, MySQL, Redis, Argo CD, Harbor, Kubernetes</span>
+            </div>
+            <div class="skill-line">
+                <span class="skill-cat">Pipelines & Métodos</span>
+                <span class="skill-items">Nextflow, Airflow, Metodologias Ágeis (Scrum, Kanban)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section class="section" style="margin-bottom: 0;">
+        <h2 class="section-title">
+            <svg class="section-icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            Formação Acadêmica
+        </h2>
+        <div class="edu-grid">
+            <div class="edu-card">
+                <div class="edu-title">Bacharelado em Tecnologia da Informação</div>
+                <div class="edu-inst">Instituto Metrópole Digital — Universidade Federal do RN (IMD/UFRN)</div>
+                <div class="edu-date">Fevereiro de 2024 – Em andamento</div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-title">Técnico em Tecnologia da Informação</div>
+                <div class="edu-inst">Instituto Federal de Educação, Ciência e Tecnologia do RN (IFRN)</div>
+                <div class="edu-date">Fevereiro de 2017 – Dezembro de 2021 (Integrado)</div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
