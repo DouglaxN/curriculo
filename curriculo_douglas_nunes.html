@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
+            --primary: #090d16;
+            --accent: #1d4ed8;
             --accent-soft: #eff6ff;
             --text-main: #334155;
             --text-dark: #0f172a;
@@ -27,45 +27,110 @@
 
         @page {
             size: A4;
-            margin: 10mm 13mm;
+            margin: 9mm 12mm;
         }
 
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text-main);
             background-color: #f1f5f9;
-            line-height: 1.4;
-            font-size: 9.3pt;
+            line-height: 1.38;
+            font-size: 9.2pt;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
-        .resume-page {
+        /* TOOLBAR PARA NAVEGADOR */
+        .screen-toolbar {
+            background: #090d16;
+            color: #ffffff;
+            padding: 9px 20px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .toolbar-inner {
             max-width: 210mm;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 8.8pt;
+        }
+
+        .toolbar-link {
+            color: #94a3b8;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .toolbar-link:hover {
+            color: #60a5fa;
+        }
+
+        .toolbar-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .toolbar-caption {
+            color: #64748b;
+            font-size: 8pt;
+        }
+
+        .print-btn {
+            background: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 8.5pt;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+        }
+
+        .print-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        /* RESUME CONTAINER */
+        .resume-page {
+            max-width: 210mm;
+            margin: 0 auto 30px auto;
             background: #ffffff;
-            padding: 20px 26px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 18px 24px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             border-radius: 8px;
         }
 
         /* HEADER */
         .header {
-            padding-bottom: 10px;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--border);
-            margin-bottom: 11px;
+            margin-bottom: 10px;
         }
 
         .name {
-            font-size: 21pt;
+            font-size: 20.5pt;
             font-weight: 800;
             color: var(--primary);
-            letter-spacing: -0.5px;
+            letter-spacing: -0.6px;
             line-height: 1.1;
         }
 
         .role-tagline {
-            font-size: 10.2pt;
+            font-size: 10pt;
             font-weight: 600;
             color: var(--accent);
             margin-top: 3px;
@@ -77,26 +142,30 @@
         .badge {
             background-color: var(--accent-soft);
             color: var(--accent);
-            padding: 1px 7px;
-            border-radius: 4px;
-            font-size: 8.5pt;
-            font-weight: 600;
+            padding: 1.5px 8px;
+            border-radius: 9999px;
+            font-size: 8pt;
+            font-weight: 700;
             border: 1px solid #bfdbfe;
         }
 
         .contacts-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 5px 14px;
-            margin-top: 8px;
-            font-size: 8.8pt;
-            color: var(--text-muted);
+            gap: 5px 8px;
+            margin-top: 7px;
+            font-size: 8.5pt;
         }
 
         .contact-item {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 2px 7px;
+            border-radius: 4px;
+            color: var(--text-muted);
         }
 
         .contact-item a {
@@ -107,59 +176,62 @@
 
         .contact-item a:hover {
             color: var(--accent);
-            text-decoration: underline;
         }
 
         .icon-svg {
-            width: 13px;
-            height: 13px;
+            width: 12px;
+            height: 12px;
             stroke: var(--accent);
-            stroke-width: 2;
+            stroke-width: 2.2;
             fill: none;
             flex-shrink: 0;
         }
 
         /* SECTION */
         .section {
-            margin-bottom: 11px;
+            margin-bottom: 10px;
             page-break-inside: avoid;
         }
 
         .section-title {
             display: flex;
             align-items: center;
-            gap: 7px;
-            font-size: 10.5pt;
-            font-weight: 700;
+            gap: 6px;
+            font-size: 10.2pt;
+            font-weight: 800;
             color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 0.7px;
-            margin-bottom: 6px;
+            letter-spacing: 0.8px;
+            margin-bottom: 5px;
             padding-bottom: 2px;
             border-bottom: 1.5px solid var(--border);
         }
 
         .section-icon {
-            width: 14px;
-            height: 14px;
+            width: 13px;
+            height: 13px;
             stroke: var(--accent);
             fill: none;
-            stroke-width: 2.2;
+            stroke-width: 2.4;
         }
 
         .summary-text {
             color: var(--text-main);
             text-align: justify;
-            line-height: 1.45;
-            background: var(--card-bg);
-            border-left: 3px solid var(--accent);
-            padding: 7px 11px;
-            border-radius: 0 5px 5px 0;
+            line-height: 1.42;
+            background: linear-gradient(90deg, #f8fafc 0%, #ffffff 100%);
+            border-left: 3.5px solid var(--accent);
+            border-top: 1px solid #f1f5f9;
+            border-right: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            padding: 6px 11px;
+            border-radius: 0 6px 6px 0;
+            font-size: 8.9pt;
         }
 
         /* EXPERIENCE */
         .exp-item {
-            margin-bottom: 8px;
+            margin-bottom: 7px;
             padding-left: 11px;
             border-left: 2px solid var(--border);
             position: relative;
@@ -184,37 +256,37 @@
         }
 
         .exp-org {
-            font-size: 9.8pt;
+            font-size: 9.6pt;
             font-weight: 700;
             color: var(--text-dark);
         }
 
         .exp-date {
-            font-size: 8.4pt;
+            font-size: 8.2pt;
             font-weight: 600;
             color: var(--text-muted);
         }
 
         .exp-role {
-            font-size: 9.1pt;
+            font-size: 8.9pt;
             font-weight: 600;
             color: var(--accent);
-            margin-bottom: 3px;
+            margin-bottom: 2.5px;
         }
 
         .bullet-list {
             list-style: none;
-            margin-top: 2px;
+            margin-top: 1.5px;
         }
 
         .bullet-list li {
             position: relative;
             padding-left: 13px;
-            margin-bottom: 2.5px;
+            margin-bottom: 2px;
             color: var(--text-main);
             text-align: justify;
-            font-size: 9pt;
-            line-height: 1.38;
+            font-size: 8.8pt;
+            line-height: 1.36;
         }
 
         .bullet-list li::before {
@@ -241,32 +313,39 @@
         .project-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            border-top: 2.2px solid var(--accent);
+            border-top: 2.4px solid var(--accent);
             border-radius: 5px;
             padding: 5px 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: all 0.2s;
+        }
+
+        .project-card.featured-card {
+            background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 100%);
+            border-color: #bfdbfe;
+            border-top: 2.5px solid #1d4ed8;
         }
 
         .project-title {
-            font-size: 8.8pt;
+            font-size: 8.7pt;
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 1.5px;
         }
 
         .project-desc {
-            font-size: 8pt;
+            font-size: 7.9pt;
             color: var(--text-main);
             margin-bottom: 3.5px;
-            line-height: 1.3;
+            line-height: 1.28;
         }
 
         .tech-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 2px;
+            gap: 2.5px;
             margin-top: auto;
         }
 
@@ -274,9 +353,9 @@
             background-color: #ffffff;
             border: 1px solid #cbd5e1;
             color: #1e293b;
-            font-size: 7pt;
-            font-weight: 600;
-            padding: 0 4px;
+            font-size: 6.8pt;
+            font-weight: 700;
+            padding: 0.5px 4.5px;
             border-radius: 3px;
         }
 
@@ -285,16 +364,23 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 6px;
-            padding: 7px 11px;
+            padding: 6px 11px;
             display: flex;
             flex-direction: column;
-            gap: 3px;
+            gap: 2.5px;
         }
 
         .skill-line {
             display: flex;
-            font-size: 8.9pt;
-            line-height: 1.38;
+            font-size: 8.7pt;
+            line-height: 1.36;
+            padding-bottom: 2px;
+            border-bottom: 1px dashed #f1f5f9;
+        }
+
+        .skill-line:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
         .skill-cat {
@@ -323,24 +409,25 @@
         .edu-card {
             background: #ffffff;
             border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
             border-radius: 5px;
-            padding: 6px 10px;
+            padding: 5px 10px;
         }
 
         .edu-title {
-            font-size: 9.2pt;
+            font-size: 9.1pt;
             font-weight: 700;
             color: var(--text-dark);
         }
 
         .edu-inst {
-            font-size: 8.6pt;
+            font-size: 8.5pt;
             color: var(--accent);
             font-weight: 600;
         }
 
         .edu-date {
-            font-size: 8.1pt;
+            font-size: 8pt;
             color: var(--text-muted);
             margin-top: 1px;
         }
@@ -348,13 +435,17 @@
         @media print {
             body {
                 background: #ffffff;
-                font-size: 9.1pt;
+                font-size: 9pt;
+            }
+            .no-print {
+                display: none !important;
             }
             .resume-page {
                 box-shadow: none;
                 padding: 0;
                 width: 100%;
                 max-width: 100%;
+                margin: 0;
             }
             .exp-item {
                 page-break-inside: avoid;
@@ -366,6 +457,23 @@
     </style>
 </head>
 <body>
+
+    <!-- TOOLBAR SUPERIOR PARA TELA (OCULTA AUTOMATICAMENTE NA IMPRESSÃO/PDF) -->
+    <div class="screen-toolbar no-print">
+        <div class="toolbar-inner">
+            <a href="index.html" class="toolbar-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Voltar ao Portfólio Web
+            </a>
+            <div class="toolbar-right">
+                <span class="toolbar-caption">Página Única A4 Oficial</span>
+                <button onclick="window.print()" class="print-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    Imprimir / Salvar em PDF
+                </button>
+            </div>
+        </div>
+    </div>
 
 <div class="resume-page">
 
@@ -492,7 +600,7 @@
         </h2>
         <div class="projects-grid">
             <!-- PROJETO PRINCIPAL -->
-            <div class="project-card">
+            <div class="project-card featured-card">
                 <div class="project-title">
                     Sistema Agentes IA (Arquitetura)
                     <span class="badge" style="font-size: 6.5pt; padding: 0 4px; vertical-align: middle; margin-left: 2px;">Principal</span>
