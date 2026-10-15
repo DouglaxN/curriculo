@@ -429,7 +429,7 @@
             <ul class="bullet-list">
                 <li>Desenvolvimento de soluções de Inteligência Artificial Generativa e automação para demandas da administração tributária.</li>
                 <li>Construção de agentes conversacionais e sistemas de busca semântica (RAG) utilizando <strong>Python, LangGraph, LangChain</strong> e banco vetorial <strong>ChromaDB</strong>.</li>
-                <li>Desenvolvimento de APIs e serviços em <strong>FastAPI e Flask</strong>, com gerenciamento de sessões de chat em <strong>Redis</strong>.</li>
+                <li>Desenvolvimento de APIs e microsserviços em <strong>FastAPI e Flask</strong>, com gerenciamento de sessões em <strong>Redis</strong> e observabilidade de LLMs com <strong>MLflow</strong>.</li>
                 <li>Padronização e containerização de ambientes com <strong>Docker e Docker Compose</strong>, controle de versão via <strong>Git/GitHub</strong> e testes de software.</li>
             </ul>
         </div>
@@ -498,7 +498,7 @@
                     <span class="badge" style="font-size: 6.5pt; padding: 0 4px; vertical-align: middle; margin-left: 2px;">Principal</span>
                 </div>
                 <div class="project-desc">
-                    Sistema central que orquestra os agentes da SEFAZ em grafos (LangGraph), com controle de sessão em Redis e observabilidade via MLflow.
+                    Backend central em FastAPI para orquestração de múltiplos agentes em grafos (LangGraph), com controle de sessão em Redis e observabilidade via MLflow.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">FastAPI</span>
@@ -513,7 +513,7 @@
             <div class="project-card">
                 <div class="project-title">Agente Sofia</div>
                 <div class="project-desc">
-                    Assistente no Telegram para motoristas em postos fiscais, com suporte a mensagens de texto, áudio e leitura de QR Code em notas fiscais.
+                    Assistente no Telegram para postos fiscais, com suporte a mensagens de áudio e leitura de QR Code em notas fiscais para checagem imediata.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">Telegram</span>
@@ -526,7 +526,7 @@
             <div class="project-card">
                 <div class="project-title">Agente Odin</div>
                 <div class="project-desc">
-                    Assistente no Mattermost para auditores fiscais, realizando consultas automatizadas a processos e chamados no sistema Citsmart.
+                    Assistente corporativo no Mattermost para auditores, com tool-calling integrado à API do Citsmart para consulta automatizada de processos.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">Mattermost</span>
@@ -539,7 +539,7 @@
             <div class="project-card">
                 <div class="project-title">Agente Talita</div>
                 <div class="project-desc">
-                    Assistente no Portal UVT para orientação sobre ICMS e notas fiscais, utilizando RAG para busca semântica em normas e documentos.
+                    Assistente fiscal no Portal UVT com arquitetura RAG (ChromaDB) para busca semântica em normas tributárias, garantindo respostas fundamentadas.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">Portal UVT</span>
@@ -552,7 +552,7 @@
             <div class="project-card">
                 <div class="project-title">API Talita (Motor NLP)</div>
                 <div class="project-desc">
-                    Serviço em Flask com modelo de classificação de intenções (Keras/TensorFlow) e normalização de texto em linguagem natural.
+                    Microsserviço em Flask com modelo neural (Keras/TensorFlow) e pipeline de NLP para classificação de intenções textuais de contribuintes.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">Flask</span>
@@ -565,7 +565,7 @@
             <div class="project-card">
                 <div class="project-title">API Caixa de Entrada</div>
                 <div class="project-desc">
-                    Pipeline para limpeza de dados e classificação automática de mensagens do canal Fale Conosco com FastText e Pandas.
+                    Pipeline automatizado com Pandas e FastText para pré-processamento e classificação de mensagens, agilizando a triagem do canal Fale Conosco.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">FastText</span>
