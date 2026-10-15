@@ -27,15 +27,15 @@
 
         @page {
             size: A4;
-            margin: 9mm 12mm;
+            margin: 7mm 11mm;
         }
 
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text-main);
             background-color: #f1f5f9;
-            line-height: 1.38;
-            font-size: 9.2pt;
+            line-height: 1.35;
+            font-size: 9pt;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
@@ -109,20 +109,20 @@
             max-width: 210mm;
             margin: 0 auto 30px auto;
             background: #ffffff;
-            padding: 18px 24px;
+            padding: 14px 20px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             border-radius: 8px;
         }
 
         /* HEADER */
         .header {
-            padding-bottom: 8px;
+            padding-bottom: 7px;
             border-bottom: 2px solid var(--border);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .name {
-            font-size: 20.5pt;
+            font-size: 20pt;
             font-weight: 800;
             color: var(--primary);
             letter-spacing: -0.6px;
@@ -130,7 +130,7 @@
         }
 
         .role-tagline {
-            font-size: 10pt;
+            font-size: 9.8pt;
             font-weight: 600;
             color: var(--accent);
             margin-top: 3px;
@@ -147,6 +147,34 @@
             font-size: 8pt;
             font-weight: 700;
             border: 1px solid #bfdbfe;
+        }
+
+        .badge-prod {
+            background-color: #ecfdf5;
+            color: #047857;
+            border: 1px solid #a7f3d0;
+            padding: 0.5px 4.5px;
+            border-radius: 9999px;
+            font-size: 6.2pt;
+            font-weight: 700;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 2px;
+            letter-spacing: 0.2px;
+        }
+
+        .badge-homolog {
+            background-color: #fffbeb;
+            color: #b45309;
+            border: 1px solid #fde68a;
+            padding: 0.5px 4.5px;
+            border-radius: 9999px;
+            font-size: 6.2pt;
+            font-weight: 700;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 2px;
+            letter-spacing: 0.2px;
         }
 
         .contacts-grid {
@@ -516,7 +544,7 @@
             Sobre Mim
         </h2>
         <div class="summary-text">
-            Desenvolvedor e pesquisador com atuação prática na arquitetura de Sistemas Multiagentes (MAS), IA Generativa, Protocolo MCP e microsserviços na SEFAZ-RN. Em bioinformática, conduzo pesquisas em transcriptômica (RNA-seq) e modelagem de redes gênicas em R no laboratório BioME/UFRN.
+            Desenvolvedor e pesquisador com atuação prática na concepção e deploy de Sistemas Multiagentes (MAS), modelos de Deep Learning (Dual-BERT), MLOps e microsserviços distribuídos na SEFAZ-RN. Em bioinformática, conduzo pesquisas em transcriptômica (RNA-seq) e modelagem de redes complexas em R no laboratório BioME/UFRN.
         </div>
     </section>
 
@@ -535,10 +563,10 @@
             </div>
             <div class="exp-role">Estagiário em Ciência de Dados e Inteligência Artificial (COTIN) — Natal/RN</div>
             <ul class="bullet-list">
-                <li>Arquitetura e desenvolvimento de plataforma distribuída de <strong>Sistemas Multiagentes (MAS)</strong> e microsserviços em <strong>Python (Flask-RESTX)</strong> e <strong>Node.js (Express)</strong>, aplicando padrões <strong>Facade, Factory e Circuit Breaker</strong>.</li>
-                <li>Implementação de <strong>Servidor FastMCP (SSE)</strong>, grafos em <strong>LangGraph</strong>, controle de sessão em <strong>Redis (TTL)</strong> e observabilidade/telemetria contínua com <strong>MLflow e RabbitMQ</strong>.</li>
-                <li>Engenharia de <strong>RAG vetorial (ChromaDB, FastEmbed)</strong> com parser XML estruturado para .docx e pipeline de <strong>Guardrails LGPD</strong> em 3 estágios (bloqueio de Prompt Injection e anonimização reversível de PII).</li>
-                <li>Automação de processos com <strong>Selenium Headless</strong>, integração direta a bancos <strong>Oracle (SIGAT)</strong> e <strong>PostgreSQL (SKIP LOCKED)</strong>, visão computacional (<strong>pyzbar</strong>) e canais omnichannel.</li>
+                <li><strong>Sistemas Multiagentes (MAS) em Produção:</strong> Arquitetura de microsserviços distribuídos em <strong>Python (Flask-RESTX)</strong> e <strong>Node.js (Express)</strong> com padrões Facade/Factory e Circuit Breaker. Implementação de servidor <strong>FastMCP (SSE)</strong>, grafos no <strong>LangGraph</strong>, sessão em <strong>Redis (TTL)</strong> e mensageria <strong>RabbitMQ</strong>, mantendo os agentes <strong>Odin (Omnichannel)</strong> e <strong>EFD (SPED/ICMS)</strong> em <strong>Produção</strong>.</li>
+                <li><strong>Deep Learning (Dual-BERT) & MLOps:</strong> Desenvolvimento de pipeline de NLP para classificação hierárquica (Assunto e Órgão) com <strong>Fine-Tuning de Dual-BERT (PyTorch/CUDA 12.1)</strong> e benchmark de 12 algoritmos (Scikit-Learn/LightGBM) calibrados via <strong>BayesSearchCV</strong> otimizando <strong>MCC</strong>. Rastreamento e versionamento no <strong>MLflow Model Registry</strong>, integrado à <strong>Extranet 2</strong> [Homologação].</li>
+                <li><strong>Automação Oracle PL/SQL & Human-in-the-Loop:</strong> Engenharia de worker assíncrono no <strong>Oracle Database (FOR UPDATE SKIP LOCKED)</strong> integrado a Stored Procedures PL/SQL (<code>UVT.TRANSFERIRMENSAGEM</code>, <code>UTL_HTTP</code> e Oracle Wallet), roteando automaticamente mensagens com confiança &ge; 70% entre 20 setores fiscais, triagem assistida e dashboard em <strong>Streamlit + Plotly</strong> [Homologação].</li>
+                <li><strong>RAG Vetorial & Guardrails LGPD:</strong> Implementação do <strong>Agente Talita</strong> [Portal UVT - Homologação] com <strong>RAG em ChromaDB</strong>, FastEmbed (<code>bge-m3</code>), parser XML (.docx) e Strict Grounding anti-alucinação. Pipeline de <strong>Guardrails LGPD</strong> em 3 estágios (anonimização reversível de PII), automação com <strong>Selenium Headless</strong> e visão computacional (<strong>pyzbar</strong>).</li>
             </ul>
         </div>
 
@@ -602,11 +630,11 @@
             <!-- PROJETO PRINCIPAL -->
             <div class="project-card featured-card">
                 <div class="project-title">
-                    Ecossistema Agentes IA (Core & MCP)
-                    <span class="badge" style="font-size: 6.5pt; padding: 0 4px; vertical-align: middle; margin-left: 2px;">Principal</span>
+                    Ecossistema MAS & FastMCP
+                    <span class="badge-prod">Produção</span>
                 </div>
                 <div class="project-desc">
-                    Plataforma em microsserviços (Flask-RESTX, LangGraph) com padrões Facade/Factory, Servidor FastMCP (SSE), memória Redis e telemetria MLflow.
+                    Plataforma distribuída em microsserviços (Flask-RESTX, LangGraph) com Servidor FastMCP (SSE), memória Redis (TTL) e telemetria MLflow.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">Flask-RESTX</span>
@@ -618,71 +646,32 @@
                 </div>
             </div>
 
-            <!-- TICKET AGENT -->
-            <div class="project-card">
-                <div class="project-title">Ticket Agent (Automação ITSM)</div>
-                <div class="project-desc">
-                    Triagem N1/N2 em 6 nós no LangGraph com arquitetura híbrida (0ms), worker PostgreSQL (SKIP LOCKED) e robô Selenium para validação de anexos.
-                </div>
-                <div class="tech-pills">
-                    <span class="pill">LangGraph</span>
-                    <span class="pill">PostgreSQL</span>
-                    <span class="pill">Selenium</span>
-                    <span class="pill">Mattermost</span>
-                    <span class="pill">Python</span>
-                </div>
-            </div>
-
             <!-- ODIN AGENT -->
             <div class="project-card">
-                <div class="project-title">Agente Odin (Omnichannel)</div>
+                <div class="project-title">
+                    Agente Odin (Omnichannel)
+                    <span class="badge-prod">Produção</span>
+                </div>
                 <div class="project-desc">
-                    Assistente para auditores via Mattermost (WebSockets) e WhatsApp (Node.js/Baileys com debounce), com tool-calling via servidor MCP e busca web.
+                    Assistente corporativo para auditores via Mattermost (WebSockets) e WhatsApp (Node.js/Baileys), com tool-calling via FastMCP e busca Tavily.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">WebSockets</span>
                     <span class="pill">Node.js</span>
                     <span class="pill">FastMCP</span>
                     <span class="pill">Tavily</span>
-                    <span class="pill">LangChain</span>
-                </div>
-            </div>
-
-            <!-- SOFIA AGENT -->
-            <div class="project-card">
-                <div class="project-title">Agente Sofia (Fiscalização)</div>
-                <div class="project-desc">
-                    Autoatendimento no Telegram para motoristas, conectado ao Oracle SIGAT, visão computacional (pyzbar) para NF-e, Geofencing Haversine e voz gTTS.
-                </div>
-                <div class="tech-pills">
-                    <span class="pill">Telegram</span>
-                    <span class="pill">Oracle DB</span>
-                    <span class="pill">pyzbar</span>
-                    <span class="pill">gTTS</span>
-                    <span class="pill">Haversine</span>
-                </div>
-            </div>
-
-            <!-- TALITA AGENT -->
-            <div class="project-card">
-                <div class="project-title">Agente Talita (RAG UVT)</div>
-                <div class="project-desc">
-                    Assistente tributária de baixa latência (DeepSeek) com busca semântica em ChromaDB, parser XML nativo para .docx e Strict Grounding anti-alucinação.
-                </div>
-                <div class="tech-pills">
-                    <span class="pill">Portal UVT</span>
-                    <span class="pill">ChromaDB</span>
-                    <span class="pill">FastEmbed</span>
-                    <span class="pill">DeepSeek</span>
-                    <span class="pill">Strict Grounding</span>
+                    <span class="pill">Mattermost</span>
                 </div>
             </div>
 
             <!-- EFD AGENT -->
             <div class="project-card">
-                <div class="project-title">Agente EFD (Consultor SPED)</div>
+                <div class="project-title">
+                    Agente EFD (Consultor SPED)
+                    <span class="badge-prod">Produção</span>
+                </div>
                 <div class="project-desc">
-                    Consultor em Escrituração Fiscal Digital e regulamento do ICMS com StateGraph determinístico, fundamentando respostas com metadados jurídicos.
+                    Consultor em Escrituração Fiscal Digital e ICMS com StateGraph determinístico, busca semântica em ChromaDB e fundamentação jurídica oficial.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">StateGraph</span>
@@ -690,6 +679,60 @@
                     <span class="pill">SPED/EFD</span>
                     <span class="pill">ICMS</span>
                     <span class="pill">Python</span>
+                </div>
+            </div>
+
+            <!-- DUAL-BERT & MLOPS -->
+            <div class="project-card">
+                <div class="project-title">
+                    Triagem Dual-BERT & MLOps
+                    <span class="badge-homolog">Extranet 2 · Homolog</span>
+                </div>
+                <div class="project-desc">
+                    Fine-Tuning de Dual-BERT (PyTorch/CUDA) e benchmark de 12 modelos (Scikit-Learn/LightGBM) com BayesSearchCV (MCC) e MLflow Model Registry.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">PyTorch</span>
+                    <span class="pill">Dual-BERT</span>
+                    <span class="pill">Scikit-Learn</span>
+                    <span class="pill">MLflow</span>
+                    <span class="pill">skopt</span>
+                </div>
+            </div>
+
+            <!-- WORKER ORACLE & PL/SQL -->
+            <div class="project-card">
+                <div class="project-title">
+                    Automação Oracle & Human-in-Loop
+                    <span class="badge-homolog">Extranet 2 · Homolog</span>
+                </div>
+                <div class="project-desc">
+                    Worker com FOR UPDATE SKIP LOCKED, procedures PL/SQL (TRANSFERIRMENSAGEM), roteamento com corte &ge; 70% e dashboard em Streamlit/Plotly.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Oracle DB</span>
+                    <span class="pill">PL/SQL</span>
+                    <span class="pill">SKIP LOCKED</span>
+                    <span class="pill">Streamlit</span>
+                    <span class="pill">Plotly</span>
+                </div>
+            </div>
+
+            <!-- TALITA AGENT -->
+            <div class="project-card">
+                <div class="project-title">
+                    Agente Talita (Chatbot RAG)
+                    <span class="badge-homolog">Portal UVT · Homolog</span>
+                </div>
+                <div class="project-desc">
+                    Assistente tributária cidadã com RAG semântico (ChromaDB), parser XML nativo para .docx, Strict Grounding e inferência via DeepSeek.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Portal UVT</span>
+                    <span class="pill">ChromaDB</span>
+                    <span class="pill">FastEmbed</span>
+                    <span class="pill">DeepSeek</span>
+                    <span class="pill">RAG</span>
                 </div>
             </div>
         </div>
@@ -704,27 +747,27 @@
         <div class="skills-box">
             <div class="skill-line">
                 <span class="skill-cat">Linguagens</span>
-                <span class="skill-items">Python 3.12, Node.js (JavaScript), R, SQL, Shell Script, Java (básico)</span>
+                <span class="skill-items">Python 3.12, Node.js (JavaScript), R, PL/SQL, SQL, Shell Script, Java (básico)</span>
+            </div>
+            <div class="skill-line">
+                <span class="skill-cat">Machine Learning & NLP</span>
+                <span class="skill-items">PyTorch (CUDA 12.1), Hugging Face Transformers (BERT), Scikit-Learn (Pipelines, Stacking), LightGBM, XGBoost, BayesSearchCV (MCC), bge-m3, MLflow</span>
             </div>
             <div class="skill-line">
                 <span class="skill-cat">IA, Agentes & RAG</span>
-                <span class="skill-items">LangGraph (StateGraph), FastMCP (SSE), LangChain, ChromaDB, FastEmbed, Tool-Calling, Guardrails (LGPD), Prompt Engineering</span>
+                <span class="skill-items">LangGraph (StateGraph), FastMCP (SSE), LangChain, ChromaDB, FastEmbed, Tool-Calling, Guardrails (LGPD), Strict Grounding, Prompt Engineering</span>
             </div>
             <div class="skill-line">
-                <span class="skill-cat">Dados & Bioinfo</span>
-                <span class="skill-items">Pandas, NumPy, Transcriptômica (RNA-seq), Análise de Redes (TreeAndLeaf, Redes Booleanas), Bioconductor</span>
-            </div>
-            <div class="skill-line">
-                <span class="skill-cat">Web & Backend</span>
-                <span class="skill-items">Flask, Flask-RESTX (Swagger), Express.js, APIs RESTful, Pydantic, SQLAlchemy, Gunicorn, WebSockets</span>
+                <span class="skill-cat">Backend & Dashboards</span>
+                <span class="skill-items">Flask, Flask-RESTX (Swagger), Express.js, Streamlit, Plotly Express, APIs RESTful, Pydantic, SQLAlchemy, Gunicorn, WebSockets</span>
             </div>
             <div class="skill-line">
                 <span class="skill-cat">Bancos, Cache & Filas</span>
-                <span class="skill-items">Oracle Database (SIGAT), PostgreSQL, Redis (TTL), RabbitMQ (AMQP), SQLite, ChromaDB (vetorial)</span>
+                <span class="skill-items">Oracle Database (SIGAT, FOR UPDATE SKIP LOCKED, Oracle Wallet), PostgreSQL, Redis (TTL), RabbitMQ (AMQP), SQLite, ChromaDB</span>
             </div>
             <div class="skill-line">
-                <span class="skill-cat">DevOps, RPA & Visão</span>
-                <span class="skill-items">Docker, Docker Compose, Kubernetes, MLflow, Selenium Headless, Visão Computacional (pyzbar), Pytest, Git</span>
+                <span class="skill-cat">DevOps, Automação & Bio</span>
+                <span class="skill-items">Docker, Docker Compose, Kubernetes, Selenium Headless, Visão Computacional (pyzbar), Transcriptômica (RNA-seq), Bioconductor, Git</span>
             </div>
         </div>
     </section>

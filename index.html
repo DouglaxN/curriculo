@@ -879,6 +879,44 @@
             justify-content: space-between;
         }
 
+        .status-badge-prod {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 2.5px 8px;
+            border-radius: 9999px;
+            font-size: 0.64rem;
+            font-weight: 700;
+            background: rgba(16, 185, 129, 0.12);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .status-badge-homolog {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 2.5px 8px;
+            border-radius: 9999px;
+            font-size: 0.64rem;
+            font-weight: 700;
+            background: rgba(245, 158, 11, 0.12);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .status-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: currentColor;
+            display: inline-block;
+        }
+
         .bento-card-title {
             font-size: 1.12rem;
             font-weight: 700;
@@ -1348,11 +1386,11 @@
                         </span>
                         <h3 class="area-title">Inteligência Artificial & Sistemas Multi-Agente</h3>
                         <p class="area-subtitle">
-                            Orquestração de agentes conversacionais orientados a grafos de decisão (LangGraph), busca semântica em normativas fiscais (RAG), observabilidade de LLMs com MLflow e microsserviços neurais de NLP.
+                            Orquestração de agentes conversacionais orientados a grafos de decisão (LangGraph), busca semântica em normativas fiscais (RAG), classificação neural hierárquica (Dual-BERT), pipelines de MLOps com MLflow e automação corporativa no Oracle Database (PL/SQL e SKIP LOCKED).
                         </p>
                     </div>
                     <span class="area-count-pill">
-                        6 Soluções em Produção
+                        7 Soluções em Produção & Homologação
                     </span>
                 </div>
 
@@ -1438,6 +1476,125 @@
 
                 <!-- Sub-grid de Agentes & APIs de IA -->
                 <div class="sub-bento-grid">
+                    <!-- AGENTE ODIN (OMNICHANNEL & MCP) [PRODUÇÃO] -->
+                    <div class="bento-card" style="border-top: 3px solid #10b981;">
+                        <div>
+                            <div class="card-category">
+                                <span>Omnichannel &middot; SEFAZ-RN</span>
+                                <span class="status-badge-prod"><span class="status-dot"></span>Em Produção</span>
+                            </div>
+                            <h4 class="bento-card-title">Agente Odin</h4>
+                            <p class="bento-card-desc">
+                                Assistente corporativo para auditores via Mattermost (WebSockets) e WhatsApp (Node.js/Baileys com debounce), com tool-calling integrado ao Servidor FastMCP (SSE) e busca web Tavily.
+                            </p>
+                        </div>
+                        <div class="bento-card-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill">WebSockets</span>
+                                <span class="tech-pill">Node.js</span>
+                                <span class="tech-pill">FastMCP (SSE)</span>
+                                <span class="tech-pill">Tavily</span>
+                                <span class="tech-pill">LangChain</span>
+                                <span class="tech-pill">Mattermost</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AGENTE EFD (LEGISLAÇÃO FISCAL SPED) [PRODUÇÃO] -->
+                    <div class="bento-card" style="border-top: 3px solid #10b981;">
+                        <div>
+                            <div class="card-category">
+                                <span>Consultoria SPED &middot; SEFAZ-RN</span>
+                                <span class="status-badge-prod"><span class="status-dot"></span>Em Produção</span>
+                            </div>
+                            <h4 class="bento-card-title">Agente EFD</h4>
+                            <p class="bento-card-desc">
+                                Consultor em Escrituração Fiscal Digital com StateGraph determinístico no LangGraph, recuperando legislação no ChromaDB e citando fontes jurídicas oficiais nos laudos fiscais.
+                            </p>
+                        </div>
+                        <div class="bento-card-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill">StateGraph</span>
+                                <span class="tech-pill">ChromaDB</span>
+                                <span class="tech-pill">SPED/EFD</span>
+                                <span class="tech-pill">ICMS</span>
+                                <span class="tech-pill">FastEmbed</span>
+                                <span class="tech-pill">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TRIAGEM DUAL-BERT & MLOPS [EXTRANET 2 - HOMOLOGAÇÃO] -->
+                    <div class="bento-card" style="border-top: 3px solid #f59e0b;">
+                        <div>
+                            <div class="card-category">
+                                <span>Deep Learning & MLOps &middot; SEFAZ-RN</span>
+                                <span class="status-badge-homolog"><span class="status-dot"></span>Extranet 2 · Homolog</span>
+                            </div>
+                            <h4 class="bento-card-title">Triagem Dual-BERT & MLOps</h4>
+                            <p class="bento-card-desc">
+                                Fine-Tuning de modelos BERT neurais em PyTorch (CUDA 12.1) para classificação hierárquica (Assunto e Órgão), benchmark de 12 modelos com BayesSearchCV (MCC) e versionamento contínuo no MLflow Model Registry.
+                            </p>
+                        </div>
+                        <div class="bento-card-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill">PyTorch (CUDA)</span>
+                                <span class="tech-pill">Dual-BERT</span>
+                                <span class="tech-pill">Scikit-Learn</span>
+                                <span class="tech-pill">BayesSearchCV (MCC)</span>
+                                <span class="tech-pill">MLflow</span>
+                                <span class="tech-pill">bge-m3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WORKER ORACLE PL/SQL & HUMAN-IN-THE-LOOP [EXTRANET 2 - HOMOLOGAÇÃO] -->
+                    <div class="bento-card" style="border-top: 3px solid #f59e0b;">
+                        <div>
+                            <div class="card-category">
+                                <span>Banco Corporativo &middot; SEFAZ-RN</span>
+                                <span class="status-badge-homolog"><span class="status-dot"></span>Extranet 2 · Homolog</span>
+                            </div>
+                            <h4 class="bento-card-title">Worker Oracle & Human-in-Loop</h4>
+                            <p class="bento-card-desc">
+                                Worker concorrente no Oracle Database (FOR UPDATE SKIP LOCKED), procedures PL/SQL (UVT.TRANSFERIRMENSAGEM, UTL_HTTP e Oracle Wallet), corte de confiança &ge; 70% entre 20 setores fiscais e dashboard em Streamlit + Plotly.
+                            </p>
+                        </div>
+                        <div class="bento-card-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill">Oracle DB</span>
+                                <span class="tech-pill">PL/SQL</span>
+                                <span class="tech-pill">SKIP LOCKED</span>
+                                <span class="tech-pill">Streamlit</span>
+                                <span class="tech-pill">Plotly</span>
+                                <span class="tech-pill">Enelvo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AGENTE TALITA (PORTAL UVT / RAG) [PORTAL UVT - HOMOLOGAÇÃO] -->
+                    <div class="bento-card" style="border-top: 3px solid #f59e0b;">
+                        <div>
+                            <div class="card-category">
+                                <span>Busca RAG &middot; SEFAZ-RN</span>
+                                <span class="status-badge-homolog"><span class="status-dot"></span>Portal UVT · Homolog</span>
+                            </div>
+                            <h4 class="bento-card-title">Agente Talita</h4>
+                            <p class="bento-card-desc">
+                                Assistente pública cidadã integrada ao Portal UVT de baixa latência (DeepSeek) com busca semântica em ChromaDB, parser XML nativo para .docx e Strict Grounding anti-alucinação sobre ICMS e IPVA.
+                            </p>
+                        </div>
+                        <div class="bento-card-footer">
+                            <div class="tech-pill-row">
+                                <span class="tech-pill">Portal UVT</span>
+                                <span class="tech-pill">ChromaDB</span>
+                                <span class="tech-pill">FastEmbed</span>
+                                <span class="tech-pill">DeepSeek</span>
+                                <span class="tech-pill">Strict Grounding</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- AGENTE TICKET (ITSM CITSMART) -->
                     <div class="bento-card">
                         <div>
@@ -1461,29 +1618,6 @@
                         </div>
                     </div>
 
-                    <!-- AGENTE ODIN (OMNICHANNEL & MCP) -->
-                    <div class="bento-card">
-                        <div>
-                            <div class="card-category">
-                                <span>Omnichannel &middot; SEFAZ-RN</span>
-                                <span style="color: var(--purple);">Mattermost & WhatsApp</span>
-                            </div>
-                            <h4 class="bento-card-title">Agente Odin</h4>
-                            <p class="bento-card-desc">
-                                Assistente via Mattermost (WebSockets) e WhatsApp (Node.js/Baileys com debounce), com tool-calling integrado ao Servidor FastMCP (SSE) e fallback resiliente.
-                            </p>
-                        </div>
-                        <div class="bento-card-footer">
-                            <div class="tech-pill-row">
-                                <span class="tech-pill">WebSockets</span>
-                                <span class="tech-pill">Node.js</span>
-                                <span class="tech-pill">FastMCP</span>
-                                <span class="tech-pill">Tavily</span>
-                                <span class="tech-pill">LangChain</span>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- AGENTE SOFIA (MULTIMODAL / POSTOS FISCAIS) -->
                     <div class="bento-card">
                         <div>
@@ -1503,52 +1637,6 @@
                                 <span class="tech-pill">pyzbar</span>
                                 <span class="tech-pill">gTTS</span>
                                 <span class="tech-pill">Haversine</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AGENTE TALITA (PORTAL UVT / RAG) -->
-                    <div class="bento-card">
-                        <div>
-                            <div class="card-category">
-                                <span>Busca RAG &middot; SEFAZ-RN</span>
-                                <span style="color: var(--amber);">Portal UVT</span>
-                            </div>
-                            <h4 class="bento-card-title">Agente Talita</h4>
-                            <p class="bento-card-desc">
-                                Assistente pública de baixa latência (DeepSeek) com busca semântica em ChromaDB, parser XML nativo para .docx e Strict Grounding anti-alucinação sobre ICMS e IPVA.
-                            </p>
-                        </div>
-                        <div class="bento-card-footer">
-                            <div class="tech-pill-row">
-                                <span class="tech-pill">Portal UVT</span>
-                                <span class="tech-pill">ChromaDB</span>
-                                <span class="tech-pill">FastEmbed</span>
-                                <span class="tech-pill">DeepSeek</span>
-                                <span class="tech-pill">Strict Grounding</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AGENTE EFD (LEGISLAÇÃO FISCAL SPED) -->
-                    <div class="bento-card">
-                        <div>
-                            <div class="card-category">
-                                <span>Consultoria SPED &middot; SEFAZ-RN</span>
-                                <span style="color: var(--primary);">Legislação ICMS</span>
-                            </div>
-                            <h4 class="bento-card-title">Agente EFD</h4>
-                            <p class="bento-card-desc">
-                                Consultor em Escrituração Fiscal Digital com StateGraph determinístico, recuperando normativas no ChromaDB e citando fontes jurídicas oficiais nos laudos.
-                            </p>
-                        </div>
-                        <div class="bento-card-footer">
-                            <div class="tech-pill-row">
-                                <span class="tech-pill">StateGraph</span>
-                                <span class="tech-pill">ChromaDB</span>
-                                <span class="tech-pill">SPED/EFD</span>
-                                <span class="tech-pill">ICMS</span>
-                                <span class="tech-pill">Python</span>
                             </div>
                         </div>
                     </div>
@@ -1712,10 +1800,10 @@
                         </div>
                         <div class="entry-role">Estagiário em Ciência de Dados e Inteligência Artificial — Natal/RN</div>
                         <ul class="entry-list">
-                            <li>Engenharia de software aplicada a IA: arquitetura e sustentação de agentes inteligentes para modernização dos serviços fiscais.</li>
-                            <li>Modelagem de grafos de raciocínio com LangGraph e desenvolvimento de microsserviços REST assíncronos em FastAPI e Flask.</li>
-                            <li>Implementação de observabilidade contínua de inferências com MLflow, rastreamento de custos/tokens e cache de sessão com Redis.</li>
-                            <li>Padronização de pipelines conteinerizados com Docker Compose e boas práticas de integração contínua via Git/GitHub.</li>
+                            <li><strong>Sistemas Multiagentes em Produção:</strong> Arquitetura e sustentação de plataforma distribuída em Python (Flask-RESTX) e Node.js (Express), servidor FastMCP via SSE, StateGraph no LangGraph, sessão Redis (TTL) e RabbitMQ, mantendo os agentes <strong>Odin (Omnichannel)</strong> e <strong>EFD (SPED/ICMS)</strong> em <strong>Produção</strong>.</li>
+                            <li><strong>Deep Learning (Dual-BERT) & MLOps:</strong> Concepção de pipeline de NLP para classificação hierárquica (Assunto e Órgão) via <strong>Fine-Tuning de Dual-BERT (PyTorch/CUDA 12.1)</strong> e benchmark de 12 modelos clássicos com BayesSearchCV (MCC), com versionamento e tracking no <strong>MLflow Model Registry</strong> integrado à <strong>Extranet 2</strong> [Homologação].</li>
+                            <li><strong>Automação Oracle PL/SQL & Human-in-the-Loop:</strong> Engenharia de worker no Oracle Database (<code>FOR UPDATE SKIP LOCKED</code>) integrado a procedures PL/SQL (<code>UVT.TRANSFERIRMENSAGEM</code>, <code>UTL_HTTP</code> e Oracle Wallet) para roteamento automático com corte &ge; 70% entre 20 setores fiscais e dashboard executivo em Streamlit + Plotly [Homologação].</li>
+                            <li><strong>RAG Vetorial & Guardrails LGPD:</strong> Desenvolvimento do <strong>Agente Talita</strong> [Portal UVT - Homologação] com busca semântica em ChromaDB, FastEmbed (<code>bge-m3</code>), parser XML nativo (.docx) e Strict Grounding anti-alucinação, além de pipeline de Guardrails LGPD em 3 estágios (anonimização reversível de PII).</li>
                         </ul>
                     </div>
                 </div>
@@ -1805,21 +1893,40 @@
                         <span>Linguagens de Programação</span>
                     </div>
                     <div class="chips-container">
-                        <span class="chip">Python</span>
+                        <span class="chip">Python 3.12</span>
+                        <span class="chip">Node.js (JavaScript)</span>
                         <span class="chip">R</span>
+                        <span class="chip">PL/SQL</span>
                         <span class="chip">SQL</span>
                         <span class="chip">Shell Script (Bash)</span>
-                        <span class="chip">PHP</span>
-                        <span class="chip">JavaScript</span>
+                        <span class="chip">PHP (Laravel)</span>
                         <span class="chip">Java (básico)</span>
                     </div>
                 </div>
 
-                <!-- IA & LLMS -->
+                <!-- MACHINE LEARNING & DEEP LEARNING -->
+                <div class="skill-box-modern">
+                    <div class="skill-cat-header">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                        <span>Machine Learning, Deep Learning & MLOps</span>
+                    </div>
+                    <div class="chips-container">
+                        <span class="chip">PyTorch (CUDA 12.1)</span>
+                        <span class="chip">Hugging Face (BERT)</span>
+                        <span class="chip">Scikit-Learn (Pipelines)</span>
+                        <span class="chip">LightGBM / XGBoost</span>
+                        <span class="chip">BayesSearchCV (MCC)</span>
+                        <span class="chip">MLflow Model Registry</span>
+                        <span class="chip">Embeddings (bge-m3)</span>
+                        <span class="chip">CalibratedClassifierCV</span>
+                    </div>
+                </div>
+
+                <!-- IA GENERATIVA & AGENTES -->
                 <div class="skill-box-modern">
                     <div class="skill-cat-header">
                         <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg>
-                        <span>Inteligência Artificial & Agentes</span>
+                        <span>IA Generativa, Agentes & RAG</span>
                     </div>
                     <div class="chips-container">
                         <span class="chip">LangGraph (StateGraph)</span>
@@ -1828,27 +1935,13 @@
                         <span class="chip">RAG Semântico</span>
                         <span class="chip">ChromaDB (Vetorial)</span>
                         <span class="chip">FastEmbed</span>
-                        <span class="chip">Guardrails (LGPD)</span>
-                        <span class="chip">APIs de LLMs (DeepSeek, OpenAI)</span>
+                        <span class="chip">Guardrails LGPD</span>
+                        <span class="chip">Strict Grounding</span>
+                        <span class="chip">DeepSeek / OpenAI</span>
                     </div>
                 </div>
 
-                <!-- BIOINFORMÁTICA -->
-                <div class="skill-box-modern">
-                    <div class="skill-cat-header">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                        <span>Bioinformática & Ciência de Dados</span>
-                    </div>
-                    <div class="chips-container">
-                        <span class="chip">Transcriptômica (RNA-seq)</span>
-                        <span class="chip">TreeAndLeaf</span>
-                        <span class="chip">Redes Booleanas</span>
-                        <span class="chip">Pandas / NumPy</span>
-                        <span class="chip">Bioconductor</span>
-                    </div>
-                </div>
-
-                <!-- BANCOS DE DADOS -->
+                <!-- BANCOS DE DADOS & MENAGENS -->
                 <div class="skill-box-modern">
                     <div class="skill-cat-header">
                         <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
@@ -1856,45 +1949,49 @@
                     </div>
                     <div class="chips-container">
                         <span class="chip">Oracle Database (SIGAT)</span>
-                        <span class="chip">PostgreSQL (SKIP LOCKED)</span>
-                        <span class="chip">Redis (Sessão & TTL)</span>
+                        <span class="chip">FOR UPDATE SKIP LOCKED</span>
+                        <span class="chip">PL/SQL & Oracle Wallet</span>
+                        <span class="chip">PostgreSQL</span>
+                        <span class="chip">Redis (Sessão TTL)</span>
                         <span class="chip">RabbitMQ (AMQP)</span>
-                        <span class="chip">ChromaDB (Embeddings)</span>
+                        <span class="chip">ChromaDB</span>
                         <span class="chip">MySQL / SQLite</span>
                     </div>
                 </div>
 
-                <!-- BACKEND & APIS -->
+                <!-- BACKEND & DASHBOARDS -->
                 <div class="skill-box-modern">
                     <div class="skill-cat-header">
                         <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                        <span>Backend, Microsserviços & APIs</span>
+                        <span>Backend, APIs & Dashboards</span>
                     </div>
                     <div class="chips-container">
                         <span class="chip">Flask & Flask-RESTX</span>
                         <span class="chip">Express.js (Node.js)</span>
+                        <span class="chip">Streamlit</span>
+                        <span class="chip">Plotly Express</span>
                         <span class="chip">APIs RESTful & Swagger</span>
                         <span class="chip">WebSockets</span>
                         <span class="chip">Pydantic & SQLAlchemy</span>
                         <span class="chip">Gunicorn / Uvicorn</span>
-                        <span class="chip">MLflow (Telemetria)</span>
                     </div>
                 </div>
 
-                <!-- DEVOPS & INFRA -->
+                <!-- DEVOPS & BIOINFORMÁTICA -->
                 <div class="skill-box-modern">
                     <div class="skill-cat-header">
                         <svg viewBox="0 0 24 24" fill="none"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
-                        <span>DevOps, Nuvem & Métodos</span>
+                        <span>DevOps, Automação & Bioinformática</span>
                     </div>
                     <div class="chips-container">
                         <span class="chip">Docker & Compose</span>
-                        <span class="chip">Linux / Shell</span>
                         <span class="chip">Kubernetes</span>
-                        <span class="chip">Argo CD</span>
-                        <span class="chip">Harbor</span>
+                        <span class="chip">Selenium Headless (RPA)</span>
+                        <span class="chip">pyzbar (Visão Computacional)</span>
+                        <span class="chip">Transcriptômica (RNA-seq)</span>
+                        <span class="chip">TreeAndLeaf</span>
+                        <span class="chip">Redes Booleanas</span>
                         <span class="chip">Git / GitHub</span>
-                        <span class="chip">Scrum / Kanban</span>
                     </div>
                 </div>
             </div>
