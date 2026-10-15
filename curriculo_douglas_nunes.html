@@ -516,7 +516,7 @@
             Sobre Mim
         </h2>
         <div class="summary-text">
-            Desenvolvedor e pesquisador com foco prático em IA Generativa, arquiteturas multiagentes (LangGraph) e sistemas RAG para busca semântica em bases de conhecimento. Em bioinformática, conduzo pesquisas com análise de expressão gênica (RNA-seq) e modelagem de redes em R.
+            Desenvolvedor e pesquisador com atuação prática na arquitetura de Sistemas Multiagentes (MAS), IA Generativa, Protocolo MCP e microsserviços na SEFAZ-RN. Em bioinformática, conduzo pesquisas em transcriptômica (RNA-seq) e modelagem de redes gênicas em R no laboratório BioME/UFRN.
         </div>
     </section>
 
@@ -533,12 +533,12 @@
                 <span class="exp-org">SEFAZ | RN — Secretaria de Estado da Tributação</span>
                 <span class="exp-date">Fev/2026 – Presente</span>
             </div>
-            <div class="exp-role">Estagiário em Ciência de Dados e Inteligência Artificial — Natal/RN</div>
+            <div class="exp-role">Estagiário em Ciência de Dados e Inteligência Artificial (COTIN) — Natal/RN</div>
             <ul class="bullet-list">
-                <li>Desenvolvimento de soluções de Inteligência Artificial Generativa e automação para demandas da administração tributária.</li>
-                <li>Construção de agentes conversacionais e sistemas de busca semântica (RAG) utilizando <strong>Python, LangGraph, LangChain</strong> e banco vetorial <strong>ChromaDB</strong>.</li>
-                <li>Desenvolvimento de APIs e microsserviços em <strong>FastAPI e Flask</strong>, com gerenciamento de sessões em <strong>Redis</strong> e observabilidade de LLMs com <strong>MLflow</strong>.</li>
-                <li>Padronização e containerização de ambientes com <strong>Docker e Docker Compose</strong>, controle de versão via <strong>Git/GitHub</strong> e testes de software.</li>
+                <li>Arquitetura e desenvolvimento de plataforma distribuída de <strong>Sistemas Multiagentes (MAS)</strong> e microsserviços em <strong>Python (Flask-RESTX)</strong> e <strong>Node.js (Express)</strong>, aplicando padrões <strong>Facade, Factory e Circuit Breaker</strong>.</li>
+                <li>Implementação de <strong>Servidor FastMCP (SSE)</strong>, grafos em <strong>LangGraph</strong>, controle de sessão em <strong>Redis (TTL)</strong> e observabilidade/telemetria contínua com <strong>MLflow e RabbitMQ</strong>.</li>
+                <li>Engenharia de <strong>RAG vetorial (ChromaDB, FastEmbed)</strong> com parser XML estruturado para .docx e pipeline de <strong>Guardrails LGPD</strong> em 3 estágios (bloqueio de Prompt Injection e anonimização reversível de PII).</li>
+                <li>Automação de processos com <strong>Selenium Headless</strong>, integração direta a bancos <strong>Oracle (SIGAT)</strong> e <strong>PostgreSQL (SKIP LOCKED)</strong>, visão computacional (<strong>pyzbar</strong>) e canais omnichannel.</li>
             </ul>
         </div>
 
@@ -602,84 +602,94 @@
             <!-- PROJETO PRINCIPAL -->
             <div class="project-card featured-card">
                 <div class="project-title">
-                    Sistema Agentes IA (Arquitetura)
+                    Ecossistema Agentes IA (Core & MCP)
                     <span class="badge" style="font-size: 6.5pt; padding: 0 4px; vertical-align: middle; margin-left: 2px;">Principal</span>
                 </div>
                 <div class="project-desc">
-                    Backend central em FastAPI para orquestração de múltiplos agentes em grafos (LangGraph), com controle de sessão em Redis e observabilidade via MLflow.
+                    Plataforma em microsserviços (Flask-RESTX, LangGraph) com padrões Facade/Factory, Servidor FastMCP (SSE), memória Redis e telemetria MLflow.
                 </div>
                 <div class="tech-pills">
-                    <span class="pill">FastAPI</span>
+                    <span class="pill">Flask-RESTX</span>
                     <span class="pill">LangGraph</span>
+                    <span class="pill">FastMCP</span>
                     <span class="pill">Redis</span>
                     <span class="pill">MLflow</span>
                     <span class="pill">Docker</span>
                 </div>
             </div>
 
-            <!-- AGENTES -->
+            <!-- TICKET AGENT -->
             <div class="project-card">
-                <div class="project-title">Agente Sofia</div>
+                <div class="project-title">Ticket Agent (Automação ITSM)</div>
                 <div class="project-desc">
-                    Assistente no Telegram para postos fiscais, com suporte a mensagens de áudio e leitura de QR Code em notas fiscais para checagem imediata.
+                    Triagem N1/N2 em 6 nós no LangGraph com arquitetura híbrida (0ms), worker PostgreSQL (SKIP LOCKED) e robô Selenium para validação de anexos.
                 </div>
                 <div class="tech-pills">
-                    <span class="pill">Telegram</span>
-                    <span class="pill">QR Code</span>
                     <span class="pill">LangGraph</span>
-                    <span class="pill">Docker</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Agente Odin</div>
-                <div class="project-desc">
-                    Assistente corporativo no Mattermost para auditores, com tool-calling integrado à API do Citsmart para consulta automatizada de processos.
-                </div>
-                <div class="tech-pills">
+                    <span class="pill">PostgreSQL</span>
+                    <span class="pill">Selenium</span>
                     <span class="pill">Mattermost</span>
-                    <span class="pill">Tool-Calling</span>
-                    <span class="pill">Citsmart</span>
-                    <span class="pill">Docker</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Agente Talita</div>
-                <div class="project-desc">
-                    Assistente fiscal no Portal UVT com arquitetura RAG (ChromaDB) para busca semântica em normas tributárias, garantindo respostas fundamentadas.
-                </div>
-                <div class="tech-pills">
-                    <span class="pill">Portal UVT</span>
-                    <span class="pill">RAG</span>
-                    <span class="pill">ChromaDB</span>
-                    <span class="pill">LangGraph</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">API Talita (Motor NLP)</div>
-                <div class="project-desc">
-                    Microsserviço em Flask com modelo neural (Keras/TensorFlow) e pipeline de NLP para classificação de intenções textuais de contribuintes.
-                </div>
-                <div class="tech-pills">
-                    <span class="pill">Flask</span>
-                    <span class="pill">TensorFlow</span>
-                    <span class="pill">NLTK</span>
                     <span class="pill">Python</span>
                 </div>
             </div>
 
+            <!-- ODIN AGENT -->
             <div class="project-card">
-                <div class="project-title">API Caixa de Entrada</div>
+                <div class="project-title">Agente Odin (Omnichannel)</div>
                 <div class="project-desc">
-                    Pipeline automatizado com Pandas e FastText para pré-processamento e classificação de mensagens, agilizando a triagem do canal Fale Conosco.
+                    Assistente para auditores via Mattermost (WebSockets) e WhatsApp (Node.js/Baileys com debounce), com tool-calling via servidor MCP e busca web.
                 </div>
                 <div class="tech-pills">
-                    <span class="pill">FastText</span>
-                    <span class="pill">Pandas</span>
-                    <span class="pill">Pipeline</span>
-                    <span class="pill">Flask</span>
+                    <span class="pill">WebSockets</span>
+                    <span class="pill">Node.js</span>
+                    <span class="pill">FastMCP</span>
+                    <span class="pill">Tavily</span>
+                    <span class="pill">LangChain</span>
+                </div>
+            </div>
+
+            <!-- SOFIA AGENT -->
+            <div class="project-card">
+                <div class="project-title">Agente Sofia (Fiscalização)</div>
+                <div class="project-desc">
+                    Autoatendimento no Telegram para motoristas, conectado ao Oracle SIGAT, visão computacional (pyzbar) para NF-e, Geofencing Haversine e voz gTTS.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Telegram</span>
+                    <span class="pill">Oracle DB</span>
+                    <span class="pill">pyzbar</span>
+                    <span class="pill">gTTS</span>
+                    <span class="pill">Haversine</span>
+                </div>
+            </div>
+
+            <!-- TALITA AGENT -->
+            <div class="project-card">
+                <div class="project-title">Agente Talita (RAG UVT)</div>
+                <div class="project-desc">
+                    Assistente tributária de baixa latência (DeepSeek) com busca semântica em ChromaDB, parser XML nativo para .docx e Strict Grounding anti-alucinação.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Portal UVT</span>
+                    <span class="pill">ChromaDB</span>
+                    <span class="pill">FastEmbed</span>
+                    <span class="pill">DeepSeek</span>
+                    <span class="pill">Strict Grounding</span>
+                </div>
+            </div>
+
+            <!-- EFD AGENT -->
+            <div class="project-card">
+                <div class="project-title">Agente EFD (Consultor SPED)</div>
+                <div class="project-desc">
+                    Consultor em Escrituração Fiscal Digital e regulamento do ICMS com StateGraph determinístico, fundamentando respostas com metadados jurídicos.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">StateGraph</span>
+                    <span class="pill">ChromaDB</span>
+                    <span class="pill">SPED/EFD</span>
+                    <span class="pill">ICMS</span>
+                    <span class="pill">Python</span>
                 </div>
             </div>
         </div>
@@ -694,11 +704,11 @@
         <div class="skills-box">
             <div class="skill-line">
                 <span class="skill-cat">Linguagens</span>
-                <span class="skill-items">Python, R, SQL, Shell Script, PHP, JavaScript, Java (básico)</span>
+                <span class="skill-items">Python 3.12, Node.js (JavaScript), R, SQL, Shell Script, Java (básico)</span>
             </div>
             <div class="skill-line">
-                <span class="skill-cat">Inteligência Artificial</span>
-                <span class="skill-items">LangGraph (multiagentes), LangChain, RAG Semântico, MLflow (observabilidade), APIs de LLMs, Keras/TensorFlow, FastText, NLTK</span>
+                <span class="skill-cat">IA, Agentes & RAG</span>
+                <span class="skill-items">LangGraph (StateGraph), FastMCP (SSE), LangChain, ChromaDB, FastEmbed, Tool-Calling, Guardrails (LGPD), Prompt Engineering</span>
             </div>
             <div class="skill-line">
                 <span class="skill-cat">Dados & Bioinfo</span>
@@ -706,15 +716,15 @@
             </div>
             <div class="skill-line">
                 <span class="skill-cat">Web & Backend</span>
-                <span class="skill-items">FastAPI, Flask, APIs RESTful, Microsserviços, Webhooks, Tool-Calling, Laravel</span>
+                <span class="skill-items">Flask, Flask-RESTX (Swagger), Express.js, APIs RESTful, Pydantic, SQLAlchemy, Gunicorn, WebSockets</span>
             </div>
             <div class="skill-line">
-                <span class="skill-cat">Bancos & Cache</span>
-                <span class="skill-items">PostgreSQL, MySQL, Oracle DB, Redis (sessão e cache), ChromaDB (vetorial), modelagem SQL</span>
+                <span class="skill-cat">Bancos, Cache & Filas</span>
+                <span class="skill-items">Oracle Database (SIGAT), PostgreSQL, Redis (TTL), RabbitMQ (AMQP), SQLite, ChromaDB (vetorial)</span>
             </div>
             <div class="skill-line">
-                <span class="skill-cat">DevOps & Infra</span>
-                <span class="skill-items">Docker, Docker Compose, Git/GitHub, Linux/Bash, Kubernetes, Argo CD, Harbor, Scrum/Kanban</span>
+                <span class="skill-cat">DevOps, RPA & Visão</span>
+                <span class="skill-items">Docker, Docker Compose, Kubernetes, MLflow, Selenium Headless, Visão Computacional (pyzbar), Pytest, Git</span>
             </div>
         </div>
     </section>
