@@ -563,10 +563,10 @@
             </div>
             <div class="exp-role">Estagiário em Ciência de Dados e Inteligência Artificial (COTIN) — Natal/RN</div>
             <ul class="bullet-list">
-                <li><strong>Sistemas Multiagentes (MAS) em Produção:</strong> Arquitetura de microsserviços distribuídos em <strong>Python (Flask-RESTX)</strong> e <strong>Node.js (Express)</strong> com padrões Facade/Factory e Circuit Breaker. Implementação de servidor <strong>FastMCP (SSE)</strong>, grafos no <strong>LangGraph</strong>, sessão em <strong>Redis (TTL)</strong> e mensageria <strong>RabbitMQ</strong>, mantendo os agentes <strong>Odin (Omnichannel)</strong> e <strong>EFD (SPED/ICMS)</strong> em <strong>Produção</strong>.</li>
-                <li><strong>Deep Learning (Dual-BERT) & MLOps:</strong> Desenvolvimento de pipeline de NLP para classificação hierárquica (Assunto e Órgão) com <strong>Fine-Tuning de Dual-BERT (PyTorch/CUDA 12.1)</strong> e benchmark de 12 algoritmos (Scikit-Learn/LightGBM) calibrados via <strong>BayesSearchCV</strong> otimizando <strong>MCC</strong>. Rastreamento e versionamento no <strong>MLflow Model Registry</strong>, integrado à <strong>Extranet 2</strong> [Homologação].</li>
-                <li><strong>Automação Oracle PL/SQL & Human-in-the-Loop:</strong> Engenharia de worker assíncrono no <strong>Oracle Database (FOR UPDATE SKIP LOCKED)</strong> integrado a Stored Procedures PL/SQL (<code>UVT.TRANSFERIRMENSAGEM</code>, <code>UTL_HTTP</code> e Oracle Wallet), roteando automaticamente mensagens com confiança &ge; 70% entre 20 setores fiscais, triagem assistida e dashboard em <strong>Streamlit + Plotly</strong> [Homologação].</li>
-                <li><strong>RAG Vetorial & Guardrails LGPD:</strong> Implementação do <strong>Agente Talita</strong> [Portal UVT - Homologação] com <strong>RAG em ChromaDB</strong>, FastEmbed (<code>bge-m3</code>), parser XML (.docx) e Strict Grounding anti-alucinação. Pipeline de <strong>Guardrails LGPD</strong> em 3 estágios (anonimização reversível de PII), automação com <strong>Selenium Headless</strong> e visão computacional (<strong>pyzbar</strong>).</li>
+                <li><strong>Sistemas Multiagentes em Produção:</strong> Arquitetura de microsserviços distribuídos em <strong>Python (Flask-RESTX)</strong> e <strong>Node.js (Express)</strong> com resiliência via Circuit Breaker. Implementação de servidor <strong>FastMCP (SSE)</strong>, grafos no <strong>LangGraph</strong>, sessão em <strong>Redis</strong> e mensageria <strong>RabbitMQ</strong>, mantendo os agentes <strong>Odin (Omnichannel)</strong> e <strong>EFD (Fiscal/SPED)</strong> operando em <strong>Produção</strong>.</li>
+                <li><strong>Classificação Inteligente & MLOps:</strong> Pipeline de NLP para classificação hierárquica de demandas tributárias via <strong>Fine-Tuning de Dual-BERT (PyTorch)</strong> e benchmark de modelos de Machine Learning (<strong>Scikit-Learn e LightGBM</strong>). Rastreamento de experimentos e versionamento no <strong>MLflow Model Registry</strong>, integrado à <strong>Extranet 2</strong> [Homologação].</li>
+                <li><strong>Automação de Processos & Human-in-the-Loop:</strong> Engenharia de worker concorrente integrado a <strong>Stored Procedures PL/SQL</strong> no <strong>Oracle Database</strong>, aplicando política Human-in-the-Loop (confiança &ge; 70%) para triagem e roteamento entre 20 setores fiscais, com dashboard em <strong>Streamlit e Plotly</strong> [Homologação].</li>
+                <li><strong>Busca Semântica (RAG) & Governança LGPD:</strong> Desenvolvimento do <strong>Agente Talita</strong> [Portal UVT - Homologação] com <strong>RAG em ChromaDB</strong>, FastEmbed e Strict Grounding anti-alucinação. Pipeline de <strong>Guardrails LGPD</strong> em 3 estágios (anonimização reversível de PII), automação com <strong>Selenium Headless</strong> e visão computacional (<strong>pyzbar</strong>).</li>
             </ul>
         </div>
 
@@ -616,33 +616,34 @@
             Projetos Desenvolvidos
         </h2>
         <div class="projects-grid">
-            <!-- PROJETO PRINCIPAL -->
-            <div class="project-card featured-card">
+            <!-- ARQUITETURA MULTIAGENTES (PRINCIPAL - SPAN 2) -->
+            <div class="project-card featured-card" style="grid-column: span 2;">
                 <div class="project-title">
-                    Ecossistema MAS & FastMCP
+                    Arquitetura Multiagentes (Core MAS & FastMCP)
                     <span class="badge-prod">Produção</span>
                 </div>
                 <div class="project-desc">
-                    Plataforma distribuída em microsserviços (Flask-RESTX, LangGraph) com Servidor FastMCP (SSE), memória Redis (TTL) e telemetria MLflow.
+                    Ecossistema distribuído de microsserviços em Python (Flask-RESTX) e LangGraph com padrões Facade e Circuit Breaker, Servidor FastMCP (SSE), memória de sessão em Redis (TTL), mensageria RabbitMQ e telemetria MLflow.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">Flask-RESTX</span>
                     <span class="pill">LangGraph</span>
-                    <span class="pill">FastMCP</span>
+                    <span class="pill">FastMCP (SSE)</span>
                     <span class="pill">Redis</span>
+                    <span class="pill">RabbitMQ</span>
                     <span class="pill">MLflow</span>
                     <span class="pill">Docker</span>
                 </div>
             </div>
 
-            <!-- ODIN AGENT -->
+            <!-- ODIN AGENT (SPAN 1) -->
             <div class="project-card">
                 <div class="project-title">
                     Agente Odin (Omnichannel)
                     <span class="badge-prod">Produção</span>
                 </div>
                 <div class="project-desc">
-                    Assistente corporativo para auditores via Mattermost (WebSockets) e WhatsApp (Node.js/Baileys), com tool-calling via FastMCP e busca Tavily.
+                    Assistente corporativo para auditores fiscais via Mattermost (WebSockets) e WhatsApp (Node.js/Baileys com debounce), tool calling via FastMCP e busca web Tavily.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">WebSockets</span>
@@ -653,14 +654,14 @@
                 </div>
             </div>
 
-            <!-- EFD AGENT -->
+            <!-- EFD AGENT (SPAN 1) -->
             <div class="project-card">
                 <div class="project-title">
                     Agente EFD (Consultor SPED)
                     <span class="badge-prod">Produção</span>
                 </div>
                 <div class="project-desc">
-                    Consultor em Escrituração Fiscal Digital e ICMS com StateGraph determinístico, busca semântica em ChromaDB e fundamentação jurídica oficial.
+                    Consultor em Escrituração Fiscal Digital e ICMS com StateGraph determinístico, busca semântica em ChromaDB e fundamentação jurídica oficial nos laudos fiscais.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">StateGraph</span>
@@ -671,57 +672,39 @@
                 </div>
             </div>
 
-            <!-- DUAL-BERT & MLOPS -->
-            <div class="project-card">
-                <div class="project-title">
-                    Triagem Dual-BERT & MLOps
-                    <span class="badge-homolog">Extranet 2 · Homolog</span>
-                </div>
-                <div class="project-desc">
-                    Fine-Tuning de Dual-BERT (PyTorch/CUDA) e benchmark de 12 modelos (Scikit-Learn/LightGBM) com BayesSearchCV (MCC) e MLflow Model Registry.
-                </div>
-                <div class="tech-pills">
-                    <span class="pill">PyTorch</span>
-                    <span class="pill">Dual-BERT</span>
-                    <span class="pill">Scikit-Learn</span>
-                    <span class="pill">MLflow</span>
-                    <span class="pill">skopt</span>
-                </div>
-            </div>
-
-            <!-- WORKER ORACLE & PL/SQL -->
-            <div class="project-card">
-                <div class="project-title">
-                    Automação Oracle & Human-in-Loop
-                    <span class="badge-homolog">Extranet 2 · Homolog</span>
-                </div>
-                <div class="project-desc">
-                    Worker com FOR UPDATE SKIP LOCKED, procedures PL/SQL (TRANSFERIRMENSAGEM), roteamento com corte &ge; 70% e dashboard em Streamlit/Plotly.
-                </div>
-                <div class="tech-pills">
-                    <span class="pill">Oracle DB</span>
-                    <span class="pill">PL/SQL</span>
-                    <span class="pill">SKIP LOCKED</span>
-                    <span class="pill">Streamlit</span>
-                    <span class="pill">Plotly</span>
-                </div>
-            </div>
-
-            <!-- TALITA AGENT -->
+            <!-- TALITA AGENT (SPAN 1) -->
             <div class="project-card">
                 <div class="project-title">
                     Agente Talita (Chatbot RAG)
                     <span class="badge-homolog">Portal UVT · Homolog</span>
                 </div>
                 <div class="project-desc">
-                    Assistente tributária cidadã com RAG semântico (ChromaDB), parser XML nativo para .docx, Strict Grounding e inferência via DeepSeek.
+                    Assistente tributária cidadã de baixa latência no Portal UVT (DeepSeek) com busca vetorial em ChromaDB, parser XML nativo para .docx e Strict Grounding anti-alucinação.
                 </div>
                 <div class="tech-pills">
                     <span class="pill">Portal UVT</span>
                     <span class="pill">ChromaDB</span>
                     <span class="pill">FastEmbed</span>
                     <span class="pill">DeepSeek</span>
-                    <span class="pill">RAG</span>
+                    <span class="pill">Strict Grounding</span>
+                </div>
+            </div>
+
+            <!-- SOFIA AGENT (SPAN 1) -->
+            <div class="project-card">
+                <div class="project-title">
+                    Agente Sofia (Fiscalização & Visão)
+                    <span class="badge-homolog">Postos Fiscais · Homolog</span>
+                </div>
+                <div class="project-desc">
+                    Autoatendimento no Telegram para motoristas de carga, conectado ao Oracle SIGAT, visão computacional (pyzbar) para NF-e via QR Code, Geofencing Haversine e voz gTTS.
+                </div>
+                <div class="tech-pills">
+                    <span class="pill">Telegram</span>
+                    <span class="pill">Oracle SIGAT</span>
+                    <span class="pill">pyzbar</span>
+                    <span class="pill">gTTS</span>
+                    <span class="pill">Haversine</span>
                 </div>
             </div>
         </div>
@@ -736,27 +719,27 @@
         <div class="skills-box">
             <div class="skill-line">
                 <span class="skill-cat">Linguagens</span>
-                <span class="skill-items">Python 3.12, Node.js (JavaScript), R, PL/SQL, SQL, Shell Script, Java (básico)</span>
+                <span class="skill-items">Python 3.12, Node.js (JavaScript), R, PL/SQL, SQL, Shell Script (Bash)</span>
             </div>
             <div class="skill-line">
-                <span class="skill-cat">Machine Learning & NLP</span>
-                <span class="skill-items">PyTorch (CUDA 12.1), Hugging Face Transformers (BERT), Scikit-Learn (Pipelines, Stacking), LightGBM, XGBoost, BayesSearchCV (MCC), bge-m3, MLflow</span>
+                <span class="skill-cat">Machine Learning & MLOps</span>
+                <span class="skill-items">PyTorch, Hugging Face (BERT), Scikit-Learn, LightGBM, XGBoost, Otimização Bayesiana, Embeddings Densos, MLflow</span>
             </div>
             <div class="skill-line">
                 <span class="skill-cat">IA, Agentes & RAG</span>
-                <span class="skill-items">LangGraph (StateGraph), FastMCP (SSE), LangChain, ChromaDB, FastEmbed, Tool-Calling, Guardrails (LGPD), Strict Grounding, Prompt Engineering</span>
+                <span class="skill-items">LangGraph (StateGraph), FastMCP (Protocolo MCP), LangChain, ChromaDB, FastEmbed, Tool Calling, Guardrails LGPD, Strict Grounding</span>
             </div>
             <div class="skill-line">
                 <span class="skill-cat">Backend & Dashboards</span>
-                <span class="skill-items">Flask, Flask-RESTX (Swagger), Express.js, Streamlit, Plotly Express, APIs RESTful, Pydantic, SQLAlchemy, Gunicorn, WebSockets</span>
+                <span class="skill-items">Flask, Flask-RESTX (Swagger), Express.js, Streamlit, Plotly Express, APIs RESTful, Pydantic, SQLAlchemy, WebSockets</span>
             </div>
             <div class="skill-line">
                 <span class="skill-cat">Bancos, Cache & Filas</span>
-                <span class="skill-items">Oracle Database (SIGAT, FOR UPDATE SKIP LOCKED, Oracle Wallet), PostgreSQL, Redis (TTL), RabbitMQ (AMQP), SQLite, ChromaDB</span>
+                <span class="skill-items">Oracle Database (PL/SQL, Concorrência), PostgreSQL, Redis, RabbitMQ (AMQP), SQLite, ChromaDB</span>
             </div>
             <div class="skill-line">
                 <span class="skill-cat">DevOps, Automação & Bio</span>
-                <span class="skill-items">Docker, Docker Compose, Kubernetes, Selenium Headless, Visão Computacional (pyzbar), Transcriptômica (RNA-seq), Bioconductor, Git</span>
+                <span class="skill-items">Docker, Docker Compose, Kubernetes, Selenium Headless, Visão Computacional (pyzbar), Transcriptômica (RNA-seq), Git</span>
             </div>
         </div>
     </section>
