@@ -26,16 +26,16 @@
         }
 
         @page {
-            size: A4;
-            margin: 7mm 11mm;
+            size: A4 portrait;
+            margin: 4.5mm 8mm;
         }
 
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--text-main);
             background-color: #f1f5f9;
-            line-height: 1.35;
-            font-size: 9pt;
+            line-height: 1.32;
+            font-size: 8.8pt;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
@@ -107,33 +107,33 @@
         /* RESUME CONTAINER */
         .resume-page {
             max-width: 210mm;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 20px auto;
             background: #ffffff;
-            padding: 14px 20px;
+            padding: 10px 14px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             border-radius: 8px;
         }
 
         /* HEADER */
         .header {
-            padding-bottom: 7px;
-            border-bottom: 2px solid var(--border);
-            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid var(--border);
+            margin-bottom: 5px;
         }
 
         .name {
-            font-size: 20pt;
+            font-size: 18pt;
             font-weight: 800;
             color: var(--primary);
-            letter-spacing: -0.6px;
+            letter-spacing: -0.5px;
             line-height: 1.1;
         }
 
         .role-tagline {
-            font-size: 9.8pt;
+            font-size: 9.2pt;
             font-weight: 600;
             color: var(--accent);
-            margin-top: 3px;
+            margin-top: 2px;
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -142,9 +142,9 @@
         .badge {
             background-color: var(--accent-soft);
             color: var(--accent);
-            padding: 1.5px 8px;
+            padding: 1px 7px;
             border-radius: 9999px;
-            font-size: 8pt;
+            font-size: 7.8pt;
             font-weight: 700;
             border: 1px solid #bfdbfe;
         }
@@ -180,9 +180,9 @@
         .contacts-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 5px 8px;
-            margin-top: 7px;
-            font-size: 8.5pt;
+            gap: 4px 7px;
+            margin-top: 5px;
+            font-size: 8.2pt;
         }
 
         .contact-item {
@@ -191,7 +191,7 @@
             gap: 4px;
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            padding: 2px 7px;
+            padding: 1.5px 6px;
             border-radius: 4px;
             color: var(--text-muted);
         }
@@ -207,8 +207,8 @@
         }
 
         .icon-svg {
-            width: 12px;
-            height: 12px;
+            width: 11px;
+            height: 11px;
             stroke: var(--accent);
             stroke-width: 2.2;
             fill: none;
@@ -217,27 +217,26 @@
 
         /* SECTION */
         .section {
-            margin-bottom: 10px;
-            page-break-inside: avoid;
+            margin-bottom: 3.5px;
         }
 
         .section-title {
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 10.2pt;
+            gap: 5px;
+            font-size: 9.4pt;
             font-weight: 800;
             color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 5px;
-            padding-bottom: 2px;
-            border-bottom: 1.5px solid var(--border);
+            letter-spacing: 0.7px;
+            margin-bottom: 3px;
+            padding-bottom: 1.5px;
+            border-bottom: 1.2px solid var(--border);
         }
 
         .section-icon {
-            width: 13px;
-            height: 13px;
+            width: 12px;
+            height: 12px;
             stroke: var(--accent);
             fill: none;
             stroke-width: 2.4;
@@ -246,35 +245,35 @@
         .summary-text {
             color: var(--text-main);
             text-align: justify;
-            line-height: 1.42;
+            line-height: 1.32;
             background: linear-gradient(90deg, #f8fafc 0%, #ffffff 100%);
-            border-left: 3.5px solid var(--accent);
+            border-left: 3px solid var(--accent);
             border-top: 1px solid #f1f5f9;
             border-right: 1px solid #f1f5f9;
             border-bottom: 1px solid #f1f5f9;
-            padding: 6px 11px;
-            border-radius: 0 6px 6px 0;
-            font-size: 8.9pt;
+            padding: 3.5px 8px;
+            border-radius: 0 5px 5px 0;
+            font-size: 8.2pt;
         }
 
         /* EXPERIENCE */
         .exp-item {
-            margin-bottom: 7px;
-            padding-left: 11px;
-            border-left: 2px solid var(--border);
+            margin-bottom: 4px;
+            padding-left: 9px;
+            border-left: 1.8px solid var(--border);
             position: relative;
         }
 
         .exp-item::before {
             content: '';
             position: absolute;
-            left: -5px;
-            top: 5px;
-            width: 8px;
-            height: 8px;
+            left: -4.5px;
+            top: 4.5px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background-color: var(--accent);
-            box-shadow: 0 0 0 2px #fff;
+            box-shadow: 0 0 0 1.5px #fff;
         }
 
         .exp-header {
@@ -284,43 +283,43 @@
         }
 
         .exp-org {
-            font-size: 9.6pt;
+            font-size: 8.9pt;
             font-weight: 700;
             color: var(--text-dark);
         }
 
         .exp-date {
-            font-size: 8.2pt;
+            font-size: 7.8pt;
             font-weight: 600;
             color: var(--text-muted);
         }
 
         .exp-role {
-            font-size: 8.9pt;
+            font-size: 8.3pt;
             font-weight: 600;
             color: var(--accent);
-            margin-bottom: 2.5px;
+            margin-bottom: 1px;
         }
 
         .bullet-list {
             list-style: none;
-            margin-top: 1.5px;
+            margin-top: 1px;
         }
 
         .bullet-list li {
             position: relative;
-            padding-left: 13px;
-            margin-bottom: 2px;
+            padding-left: 11px;
+            margin-bottom: 1px;
             color: var(--text-main);
             text-align: justify;
-            font-size: 8.8pt;
-            line-height: 1.36;
+            font-size: 8pt;
+            line-height: 1.25;
         }
 
         .bullet-list li::before {
             content: '•';
             position: absolute;
-            left: 2px;
+            left: 1px;
             color: var(--accent);
             font-weight: bold;
         }
@@ -334,16 +333,16 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 5px;
+            gap: 4px;
             margin-top: 2px;
         }
 
         .project-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            border-top: 2.4px solid var(--accent);
+            border-top: 2px solid var(--accent);
             border-radius: 5px;
-            padding: 5px 8px;
+            padding: 3.5px 6px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -353,27 +352,27 @@
         .project-card.featured-card {
             background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 100%);
             border-color: #bfdbfe;
-            border-top: 2.5px solid #1d4ed8;
+            border-top: 2.2px solid #1d4ed8;
         }
 
         .project-title {
-            font-size: 8.7pt;
+            font-size: 8.2pt;
             font-weight: 700;
             color: var(--text-dark);
-            margin-bottom: 1.5px;
+            margin-bottom: 1px;
         }
 
         .project-desc {
-            font-size: 7.9pt;
+            font-size: 7.1pt;
             color: var(--text-main);
-            margin-bottom: 3.5px;
-            line-height: 1.28;
+            margin-bottom: 2.5px;
+            line-height: 1.22;
         }
 
         .tech-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 2.5px;
+            gap: 2px;
             margin-top: auto;
         }
 
@@ -381,9 +380,9 @@
             background-color: #ffffff;
             border: 1px solid #cbd5e1;
             color: #1e293b;
-            font-size: 6.8pt;
+            font-size: 6.4pt;
             font-weight: 700;
-            padding: 0.5px 4.5px;
+            padding: 0.5px 3.5px;
             border-radius: 3px;
         }
 
@@ -391,18 +390,18 @@
         .skills-box {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 6px 11px;
+            border-radius: 5px;
+            padding: 4px 8px;
             display: flex;
             flex-direction: column;
-            gap: 2.5px;
+            gap: 1.5px;
         }
 
         .skill-line {
             display: flex;
-            font-size: 8.7pt;
-            line-height: 1.36;
-            padding-bottom: 2px;
+            font-size: 7.9pt;
+            line-height: 1.26;
+            padding-bottom: 1.5px;
             border-bottom: 1px dashed #f1f5f9;
         }
 
@@ -412,7 +411,7 @@
         }
 
         .skill-cat {
-            width: 155px;
+            width: 145px;
             font-weight: 700;
             color: var(--primary);
             flex-shrink: 0;
@@ -431,39 +430,39 @@
         .edu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 7px;
+            gap: 5px;
         }
 
         .edu-card {
             background: #ffffff;
             border: 1px solid var(--border);
-            border-left: 3px solid var(--accent);
-            border-radius: 5px;
-            padding: 5px 10px;
+            border-left: 2.5px solid var(--accent);
+            border-radius: 4px;
+            padding: 3px 8px;
         }
 
         .edu-title {
-            font-size: 9.1pt;
+            font-size: 8.4pt;
             font-weight: 700;
             color: var(--text-dark);
         }
 
         .edu-inst {
-            font-size: 8.5pt;
+            font-size: 7.9pt;
             color: var(--accent);
             font-weight: 600;
         }
 
         .edu-date {
-            font-size: 8pt;
+            font-size: 7.4pt;
             color: var(--text-muted);
-            margin-top: 1px;
+            margin-top: 0.5px;
         }
 
         @media print {
             body {
                 background: #ffffff;
-                font-size: 9pt;
+                font-size: 8.8pt;
             }
             .no-print {
                 display: none !important;
@@ -476,9 +475,6 @@
                 margin: 0;
             }
             .exp-item {
-                page-break-inside: avoid;
-            }
-            .section {
                 page-break-inside: avoid;
             }
         }
