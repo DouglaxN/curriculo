@@ -1476,16 +1476,16 @@
 
                 <!-- Sub-grid de Agentes & APIs de IA -->
                 <div class="sub-bento-grid">
-                    <!-- AGENTE ODIN (OMNICHANNEL & MCP) [PRODUÇÃO] -->
+                    <!-- AGENTE ODIN (ATENDIMENTO & MCP) [PRODUÇÃO] -->
                     <div class="bento-card" style="border-top: 3px solid #10b981;">
                         <div>
                             <div class="card-category">
-                                <span>Omnichannel &middot; SEFAZ-RN</span>
+                                <span>Atendimento &middot; SEFAZ-RN</span>
                                 <span class="status-badge-prod"><span class="status-dot"></span>Em Produção</span>
                             </div>
                             <h4 class="bento-card-title">Agente Odin</h4>
                             <p class="bento-card-desc">
-                                Assistente corporativo para auditores via Mattermost (WebSockets) e WhatsApp (Node.js/Baileys com debounce), com tool-calling integrado ao Servidor FastMCP (SSE) e busca web Tavily.
+                                Assistente corporativo para auditores fiscais integrado ao Mattermost e WhatsApp (Node.js/Baileys), com consultas automatizadas via servidor FastMCP e busca web.
                             </p>
                         </div>
                         <div class="bento-card-footer">
@@ -1548,16 +1548,16 @@
                         </div>
                     </div>
 
-                    <!-- WORKER ORACLE PL/SQL & HUMAN-IN-THE-LOOP [EXTRANET 2 - HOMOLOGAÇÃO] -->
+                    <!-- WORKER ORACLE PL/SQL & AUTOMAÇÃO [EXTRANET 2 - HOMOLOGAÇÃO] -->
                     <div class="bento-card" style="border-top: 3px solid #f59e0b;">
                         <div>
                             <div class="card-category">
                                 <span>Banco Corporativo &middot; SEFAZ-RN</span>
                                 <span class="status-badge-homolog"><span class="status-dot"></span>Extranet 2 · Homolog</span>
                             </div>
-                            <h4 class="bento-card-title">Worker Oracle & Human-in-Loop</h4>
+                            <h4 class="bento-card-title">Worker Oracle & Automação</h4>
                             <p class="bento-card-desc">
-                                Worker concorrente integrado a Stored Procedures em PL/SQL no Oracle Database, com triagem e revisão humana (Human-in-the-Loop, confiança &ge; 70%) para roteamento entre 20 setores e acompanhamento em Streamlit.
+                                Worker concorrente integrado a Stored Procedures em PL/SQL no Oracle Database, com triagem e revisão para roteamento entre 20 setores e acompanhamento em Streamlit.
                             </p>
                         </div>
                         <div class="bento-card-footer">
@@ -1572,16 +1572,16 @@
                         </div>
                     </div>
 
-                    <!-- AGENTE TALITA (PORTAL UVT / RAG) [PORTAL UVT - HOMOLOGAÇÃO] -->
+                    <!-- AGENTE TALITA (PORTAL UVT) [PORTAL UVT - HOMOLOGAÇÃO] -->
                     <div class="bento-card" style="border-top: 3px solid #f59e0b;">
                         <div>
                             <div class="card-category">
-                                <span>Busca RAG &middot; SEFAZ-RN</span>
+                                <span>Busca Normativa &middot; SEFAZ-RN</span>
                                 <span class="status-badge-homolog"><span class="status-dot"></span>Portal UVT · Homolog</span>
                             </div>
                             <h4 class="bento-card-title">Agente Talita</h4>
                             <p class="bento-card-desc">
-                                Assistente pública cidadã integrada ao Portal UVT de baixa latência (DeepSeek) com busca semântica em ChromaDB, parser XML nativo para .docx e Strict Grounding anti-alucinação sobre ICMS e IPVA.
+                                Assistente virtual integrada ao Portal UVT para suporte ao contribuinte, com busca de legislação em ChromaDB e processamento estruturado de documentos fiscais.
                             </p>
                         </div>
                         <div class="bento-card-footer">
@@ -1590,7 +1590,7 @@
                                 <span class="tech-pill">ChromaDB</span>
                                 <span class="tech-pill">FastEmbed</span>
                                 <span class="tech-pill">DeepSeek</span>
-                                <span class="tech-pill">Strict Grounding</span>
+                                <span class="tech-pill">Legislação</span>
                             </div>
                         </div>
                     </div>
@@ -1800,10 +1800,10 @@
                         </div>
                         <div class="entry-role">Estagiário em Ciência de Dados e Inteligência Artificial — Natal/RN</div>
                         <ul class="entry-list">
-                            <li><strong>Sistemas Multiagentes e Backend:</strong> Desenvolvimento e sustentação dos agentes <strong>Odin (omnichannel)</strong> e <strong>EFD (fiscal)</strong> em produção, integrando <strong>LangGraph</strong>, <strong>FastMCP (SSE)</strong>, microsserviços em <strong>Python (Flask)</strong> e <strong>Node.js</strong>, mensageria com <strong>RabbitMQ</strong> e cache em <strong>Redis</strong>.</li>
-                            <li><strong>Modelos de NLP e MLOps:</strong> Construção de pipeline para classificação de demandas fiscais via fine-tuning de <strong>Dual-BERT (PyTorch)</strong> e modelos <strong>Scikit-Learn/LightGBM</strong>, com rastreamento e versionamento no <strong>MLflow Model Registry</strong> [Extranet 2 · Homologação].</li>
-                            <li><strong>Automação e Banco de Dados:</strong> Criação de workers integrados a Stored Procedures em <strong>PL/SQL (Oracle Database)</strong> para triagem de chamados com revisão humana (<em>Human-in-the-Loop</em>), monitorados por dashboards em <strong>Streamlit e Plotly</strong>.</li>
-                            <li><strong>Assistente RAG e Proteção de Dados:</strong> Desenvolvimento do <strong>Agente Talita</strong> no Portal UVT com busca vetorial (<strong>ChromaDB</strong>), filtros anti-alucinação e módulo de anonimização de dados sensíveis (PII) em conformidade com a LGPD.</li>
+                            <li>Desenvolvimento e sustentação de microsserviços em <strong>Python (Flask)</strong> e <strong>Node.js</strong> para os agentes Odin e EFD em produção, utilizando <strong>RabbitMQ</strong> para mensageria assíncrona, <strong>Redis</strong> para cache e integração via <strong>FastMCP (SSE)</strong> e <strong>LangGraph</strong>.</li>
+                            <li>Construção de pipelines de classificação de demandas fiscais com modelos <strong>BERT (PyTorch)</strong> e algoritmos de Machine Learning (<strong>Scikit-Learn e LightGBM</strong>), com rastreamento de experimentos e versionamento de modelos no <strong>MLflow</strong>.</li>
+                            <li>Automação de rotinas integradas a Stored Procedures em <strong>PL/SQL (Oracle Database)</strong> para triagem e distribuição de chamados tributários, com monitoramento em tempo real via dashboards em <strong>Streamlit e Plotly</strong>.</li>
+                            <li>Implementação do assistente virtual <strong>Talita</strong> no Portal UVT, utilizando busca semântica em documentos com <strong>ChromaDB</strong> e módulo de anonimização de dados sensíveis em conformidade com a LGPD.</li>
                         </ul>
                     </div>
                 </div>
@@ -1910,17 +1910,16 @@
                 <div class="skill-box-modern">
                     <div class="skill-cat-header">
                         <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg>
-                        <span>IA Generativa, Agentes & RAG</span>
+                        <span>Sistemas Inteligentes & NLP</span>
                     </div>
                     <div class="chips-container">
-                        <span class="chip">LangGraph (StateGraph)</span>
-                        <span class="chip">FastMCP (Protocolo MCP)</span>
+                        <span class="chip">LangGraph</span>
+                        <span class="chip">FastMCP</span>
                         <span class="chip">LangChain</span>
-                        <span class="chip">RAG Semântico</span>
-                        <span class="chip">ChromaDB (Vetorial)</span>
+                        <span class="chip">Busca Semântica</span>
+                        <span class="chip">ChromaDB</span>
                         <span class="chip">FastEmbed</span>
-                        <span class="chip">Guardrails LGPD</span>
-                        <span class="chip">Strict Grounding</span>
+                        <span class="chip">Anonimização LGPD</span>
                         <span class="chip">DeepSeek / OpenAI</span>
                     </div>
                 </div>
